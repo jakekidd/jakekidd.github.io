@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Curve</title>
+<style>
+  .viz-root{
+    color-scheme:light;
+    --surface-1:#fcfcfb; --page:#f9f9f7;
+    --text-primary:#0b0b0b; --text-secondary:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+    --series-1:#2a78d6; --series-2:#eb6834; --series-3:#1baf7a;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:where(:not([data-theme="light"])) .viz-root{
+      color-scheme:dark;
+      --surface-1:#1a1a19; --page:#0d0d0d;
+      --text-primary:#ffffff; --text-secondary:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+      --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
+    }
+  }
+  :root[data-theme="dark"] .viz-root{
+    color-scheme:dark;
+    --surface-1:#1a1a19; --page:#0d0d0d;
+    --text-primary:#ffffff; --text-secondary:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+    --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
+  }
+  body{margin:0;background:var(--page);color:var(--text-primary);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+  main{max-width:920px;margin:0 auto;padding:28px 20px 48px}
+  h1{font-size:22px;font-weight:600;margin:0 0 4px}
+  .sub{color:var(--text-secondary);margin:0 0 18px}
+  .controls{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:flex-end;margin:0 0 14px}
+  .ctl{display:flex;flex-direction:column;gap:4px;min-width:150px;flex:1 1 150px;max-width:210px}
+  .ctl label{font-size:12px;color:var(--text-secondary)}
+  .ctl output{font-size:12px;color:var(--text-primary);font-variant-numeric:tabular-nums}
+  .ctl input[type=range]{width:100%;accent-color:var(--series-1);margin:0}
+  .ctl.check{flex-direction:row;align-items:center;gap:8px;min-width:0;max-width:none;flex:0 0 auto}
+  .ctl.check label{color:var(--text-primary);font-size:13px}
+  .card{background:var(--surface-1);border:1px solid var(--border);border-radius:8px;padding:12px 8px 6px;position:relative}
+  svg{width:100%;height:auto;display:block;cursor:crosshair}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;padding:8px 10px 4px;font-size:12px;color:var(--text-secondary)}
+  .legend .sw{display:inline-block;width:22px;height:0;border-top:2px solid;vertical-align:middle;margin-right:6px}
+  .tip{position:absolute;pointer-events:none;background:var(--surface-1);border:1px solid var(--border);border-radius:6px;padding:6px 9px;font-size:12px;color:var(--text-primary);box-shadow:0 2px 8px rgba(0,0,0,.10);display:none;white-space:nowrap;line-height:1.5}
+  .tip b{font-variant-numeric:tabular-nums;font-weight:600}
+  .tip .k{color:var(--text-secondary);display:inline-block;min-width:74px}
+  .cap{color:var(--text-secondary);font-size:13px;margin:14px 0 0}
+  details{margin-top:14px;color:var(--text-secondary);font-size:13px}
+  summary{cursor:pointer}
+  table{border-collapse:collapse;margin-top:8px;font-variant-numeric:tabular-nums}
+  th,td{text-align:right;padding:3px 12px;border-bottom:1px solid var(--grid);font-weight:500}
+  th{color:var(--text-secondary);font-weight:500}
+  th:first-child,td:first-child{text-align:left}
+  button{font:inherit;font-size:12px;padding:5px 10px;border:1px solid var(--border);background:var(--surface-1);color:var(--text-primary);border-radius:6px;cursor:pointer}
+</style>
+</head>
+<body class="viz-root">
+<main>
+  <h1>The curve</h1>
+  <p class="sub">Capability of imitation-trained models over time. Solid is what the mechanism produces; dotted is what's being sold. This is a model of the argument, not data.</p>
+
+  <div class="controls">
+    <div class="ctl"><label for="future">future breakthroughs</label><input id="future" type="range" min="0" max="8" value="0"><output id="o-future">0</output></div>
+    <div class="ctl"><label for="gap">years between them</label><input id="gap" type="range" min="1" max="8" value="4"><output id="o-gap">4 yrs</output></div>
+    <div class="ctl"><label for="k">how fast each one flattens</label><input id="k" type="range" min="2" max="16" value="8"><output id="o-k">half its gain in 14 yrs</output></div>
+    <div class="ctl"><label for="r">promised growth</label><input id="r" type="range" min="5" max="60" value="20"><output id="o-r">20% / yr</output></div>
+    <div class="ctl"><label for="drift">human ceiling drift</label><input id="drift" type="range" min="-15" max="15" value="0"><output id="o-drift">0.0% / yr</output></div>
+    <div class="ctl check"><input id="verifier" type="checkbox"><label for="verifier">show a domain with an exact verifier</label></div>
+    <div class="ctl check"><button id="reset" type="button">reset</button></div>
+  </div>
+
+  <div class="card">
+    <svg id="chart" viewBox="0 0 880 460" role="img" aria-label="Capability over time: a diminishing-returns curve approaching the human ceiling, versus a promised exponential."></svg>
+    <div class="tip" id="tip"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <p class="cap">The solid line is a stack of diminishing-return bumps, one per breakthrough, all chasing the same ceiling: the best of what humans have written down. Add breakthroughs and it gets there faster. It doesn't cross. The dotted line is the same early data extrapolated as an exponential, which is what the slides show; the early part of a log looks exactly like the early part of an exponential. The ceiling itself can drift: if the people producing the training data get dumber, the line the curve is chasing sinks, and the curve sinks with it. The only line that crosses is a domain with an exact verifier, where the reward isn't human judgment.</p>
+
+  <details><summary>table view</summary><table id="table"></table></details>
+</main>
+
+<script>
+(function(){
+  const svg = document.getElementById('chart');
+  const tip = document.getElementById('tip');
+  const card = svg.parentElement;
+  const W = 880, H = 460, M = { t: 30, r: 172, b: 60, l: 52 };
+  const T0 = 2017, T1 = 2045, NOW = 2026, YMAX = 1.6;
+  const HIST = [
+    { t: 2017, label: 'transformer' },
+    { t: 2022, label: 'RLHF' },
+    { t: 2024, label: 'RLVR' }
+  ];
+  const DEF = { future: 0, gap: 4, k: 8, r: 20, drift: 0, verifier: false };
+  const st = Object.assign({}, DEF);
+
+  const plotW = W - M.l - M.r, plotH = H - M.t - M.b;
+  const px = t => M.l + (t - T0) / (T1 - T0) * plotW;
+  const py = y => M.t + (1 - y / YMAX) * plotH;
+
+  function bumps() {
+    const b = HIST.map(h => h.t);
+    for (let i = 1; i <= st.future; i++) b.push(NOW + i * st.gap);
+    return b;
+  }
+  // The ceiling is what humans have written down. Drift models education
+  // getting better or worse; reality chases it because that's its training data.
+  function ceiling(t) { return Math.max(0.05, 1 + (st.drift / 1000) * (t - NOW)); }
+  function reality(t) {
+    let p = 1;
+    for (const tb of bumps()) {
+      if (t <= tb) continue;
+      const L = Math.log(1 + (t - tb) / st.k);
+      p *= 1 - L / (1 + L);          // each breakthrough closes a log-shaped fraction of the remaining gap
+    }
+    return (1 - p) * ceiling(t);
+  }
+  function promise(t) {
+    if (t < NOW) return null;
+    return reality(NOW) * Math.exp((st.r / 100) * (t - NOW));
+  }
+  // A domain with an exact reward (Go, proofs, tests) is not bound by imitation,
+  // and it doesn't care whether humans get smarter or dumber.
+  function verifier(t) {
+    const t0 = 2016;
+    if (t <= t0) return 0;
+    const L = Math.log(1 + (t - t0) / st.k);
+    return 2.4 * L / (1 + L);
+  }
+
+  // Build a path; returns d plus the last in-frame point and whether the line left through the top.
+  function trace(fn) {
+    let d = '', pen = false, last = null, exitedTop = false, exitPt = null;
+    const N = 300;
+    for (let i = 0; i <= N; i++) {
+      const t = T0 + (T1 - T0) * i / N;
+      const v = fn(t);
+      if (v == null || !isFinite(v)) { pen = false; continue; }
+      const x = px(t), y = py(Math.min(v, YMAX * 1.08));
+      d += (pen ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1);
+      pen = true;
+      if (v <= YMAX) { last = { x, y, t, v }; }
+      else if (!exitedTop) { exitedTop = true; exitPt = { x, y: M.t, t }; }
+    }
+    return { d, last, exitedTop, exitPt };
+  }
+
+  function fmtPct(v, t) { return Math.round(100 * v / ceiling(t)) + '%'; }
+  function fmtX(v, t) { const r = v / ceiling(t); return (r >= 10 ? Math.round(r) : r.toFixed(1)) + '× human'; }
+
+  function render() {
+    const rl = trace(reality), pr = trace(promise), vf = st.verifier ? trace(verifier) : null;
+    let s = '';
+    s += `<defs><clipPath id="clip"><rect x="${M.l}" y="${M.t - 2}" width="${plotW}" height="${plotH + 2}"/></clipPath></defs>`;
+
+    // reference lines (sloped when the ceiling drifts)
+    const refs = [
+      { f: t => ceiling(t), label: 'best human in the domain' },
+      { f: t => 0.6 * ceiling(t), label: 'average informed human' }
+    ];
+    for (const r of refs) {
+      s += `<line x1="${px(T0)}" y1="${py(r.f(T0)).toFixed(1)}" x2="${px(T1)}" y2="${py(r.f(T1)).toFixed(1)}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="6 5" opacity="0.8"/>`;
+    }
+
+    // "now"
+    s += `<line x1="${px(NOW)}" y1="${M.t}" x2="${px(NOW)}" y2="${py(0)}" stroke="var(--grid)" stroke-width="1"/>`;
+    s += `<text x="${px(NOW) + 5}" y="${M.t + 11}" font-size="11" fill="var(--muted)">now</text>`;
+
+    // baseline + year ticks
+    s += `<line x1="${M.l}" y1="${py(0)}" x2="${M.l + plotW}" y2="${py(0)}" stroke="var(--axis)" stroke-width="1"/>`;
+    for (const y of [2017, 2020, 2025, 2030, 2035, 2040, 2045]) {
+      s += `<text x="${px(y)}" y="${py(0) + 16}" text-anchor="${y === 2017 ? 'start' : (y === 2045 ? 'end' : 'middle')}" font-size="11" fill="var(--muted)">${y}</text>`;
+    }
+    // breakthrough markers: past (filled) and future (hollow), labels on a second row
+    for (const h of HIST) {
+      s += `<circle cx="${px(h.t)}" cy="${py(0)}" r="3.5" fill="var(--series-1)"/>`;
+      s += `<text x="${px(h.t)}" y="${py(0) + 31}" text-anchor="${h.t === 2017 ? 'start' : 'middle'}" font-size="11" fill="var(--text-secondary)">${h.label}</text>`;
+    }
+    for (let i = 1; i <= st.future; i++) {
+      const t = NOW + i * st.gap;
+      if (t > T1) break;
+      s += `<circle cx="${px(t)}" cy="${py(0)}" r="3.5" fill="var(--surface-1)" stroke="var(--series-1)" stroke-width="1.5"/>`;
+    }
+    if (st.future > 0) {
+      const t = NOW + st.gap; if (t <= T1) s += `<text x="${px(t)}" y="${py(0) + 31}" text-anchor="middle" font-size="11" fill="var(--text-secondary)">future</text>`;
+    }
+    s += `<text x="${M.l - 8}" y="${M.t + plotH / 2}" transform="rotate(-90 ${M.l - 8} ${M.t + plotH / 2})" text-anchor="middle" font-size="11" fill="var(--muted)">capability</text>`;
+
+    // series
+    s += `<g clip-path="url(#clip)">`;
+    if (vf) s += `<path d="${vf.d}" fill="none" stroke="var(--series-3)" stroke-width="2" stroke-linejoin="round"/>`;
+    s += `<path d="${pr.d}" fill="none" stroke="var(--series-2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 6"/>`;
+    s += `<path d="${rl.d}" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linejoin="round"/>`;
+    s += `</g>`;
+
+    // right-side labels, stacked so they never overlap
+    const labels = [];
+    for (const r of refs) labels.push({ y: py(r.f(T1)) + 4, text: r.label, color: null });
+    if (rl.last) labels.push({ y: rl.last.y + 4, text: 'reality', color: 'var(--series-1)' });
+    if (vf && vf.last && !vf.exitedTop) labels.push({ y: vf.last.y + 4, text: 'exact verifier', color: 'var(--series-3)' });
+    if (!pr.exitedTop && pr.last) labels.push({ y: pr.last.y + 4, text: 'the promise', color: 'var(--series-2)' });
+    labels.sort((a, b) => a.y - b.y);
+    for (let i = 1; i < labels.length; i++) if (labels[i].y - labels[i - 1].y < 15) labels[i].y = labels[i - 1].y + 15;
+    const over = labels.length ? labels[labels.length - 1].y - (py(0) - 2) : 0;
+    if (over > 0) for (const l of labels) l.y -= over;
+    for (const l of labels) {
+      const x0 = M.l + plotW + 8;
+      if (l.color) s += `<circle cx="${x0 + 3}" cy="${(l.y - 4).toFixed(1)}" r="3" fill="${l.color}"/>`;
+      s += `<text x="${l.color ? x0 + 11 : x0}" y="${l.y.toFixed(1)}" font-size="11" fill="var(--text-secondary)">${l.text}</text>`;
+    }
+    // lines that leave through the top get labeled at the exit
+    if (pr.exitedTop && pr.exitPt) {
+      s += `<circle cx="${pr.exitPt.x.toFixed(1)}" cy="${M.t + 3}" r="3" fill="var(--series-2)"/>`;
+      s += `<text x="${(pr.exitPt.x + 8).toFixed(1)}" y="${M.t + 7}" font-size="11" fill="var(--text-secondary)">the promise (off the chart)</text>`;
+    }
+    if (vf && vf.exitedTop && vf.exitPt) {
+      s += `<circle cx="${vf.exitPt.x.toFixed(1)}" cy="${M.t + 3}" r="3" fill="var(--series-3)"/>`;
+      s += `<text x="${(vf.exitPt.x + 8).toFixed(1)}" y="${M.t + 21}" font-size="11" fill="var(--text-secondary)">exact verifier</text>`;
+    }
+
+    s += `<g id="hover"></g>`;
+    s += `<rect id="hit" x="${M.l}" y="${M.t}" width="${plotW}" height="${plotH}" fill="transparent"/>`;
+    svg.innerHTML = s;
+
+    // legend
+    const leg = [
+      `<span><span class="sw" style="border-color:var(--series-1)"></span>reality: imitation-trained models</span>`,
+      `<span><span class="sw" style="border-color:var(--series-2);border-top-style:dotted"></span>the promise: exponential extrapolation from now</span>`
+    ];
+    if (st.verifier) leg.push(`<span><span class="sw" style="border-color:var(--series-3)"></span>a domain with an exact verifier (Go, proofs, tests)</span>`);
+    document.getElementById('legend').innerHTML = leg.join('');
+
+    // table
+    let h = '<tr><th>year</th><th>reality</th><th>the promise</th>' + (st.verifier ? '<th>exact verifier</th>' : '') + '</tr>';
+    for (let y = 2017; y <= 2045; y += 4) {
+      const p = promise(y);
+      h += `<tr><td>${y}</td><td>${fmtPct(reality(y), y)} of human</td><td>${p == null ? '—' : fmtX(p, y)}</td>` + (st.verifier ? `<td>${fmtX(verifier(y), y)}</td>` : '') + '</tr>';
+    }
+    document.getElementById('table').innerHTML = h;
+  }
+
+  // hover: crosshair + tooltip
+  function hideTip() { tip.style.display = 'none'; const g = svg.querySelector('#hover'); if (g) g.innerHTML = ''; }
+  svg.addEventListener('mousemove', e => {
+    const r = svg.getBoundingClientRect();
+    const sx = (e.clientX - r.left) * W / r.width;
+    if (sx < M.l || sx > M.l + plotW) { hideTip(); return; }
+    const t = T0 + (sx - M.l) / plotW * (T1 - T0);
+    const g = svg.querySelector('#hover');
+    let s = `<line x1="${sx.toFixed(1)}" y1="${M.t}" x2="${sx.toFixed(1)}" y2="${py(0)}" stroke="var(--axis)" stroke-width="1"/>`;
+    const dot = (v, c) => { if (v == null || v > YMAX) return ''; return `<circle cx="${sx.toFixed(1)}" cy="${py(v).toFixed(1)}" r="4.5" fill="${c}" stroke="var(--surface-1)" stroke-width="2"/>`; };
+    const rv = reality(t), pv = promise(t), vv = st.verifier ? verifier(t) : null;
+    s += dot(rv, 'var(--series-1)') + dot(pv, 'var(--series-2)') + (vv == null ? '' : dot(vv, 'var(--series-3)'));
+    g.innerHTML = s;
+    let html = `<div><b>${Math.round(t)}</b></div>`;
+    html += `<div><span class="k">reality</span><b>${fmtPct(rv, t)}</b> of human</div>`;
+    html += `<div><span class="k">the promise</span><b>${pv == null ? '—' : (pv > 40 ? 'off the chart' : fmtX(pv, t))}</b></div>`;
+    if (vv != null) html += `<div><span class="k">verifier</span><b>${fmtX(vv, t)}</b></div>`;
+    tip.innerHTML = html;
+    tip.style.display = 'block';
+    const cr = card.getBoundingClientRect();
+    let left = e.clientX - cr.left + 14, top = e.clientY - cr.top - 12;
+    if (left + tip.offsetWidth > cr.width - 8) left = e.clientX - cr.left - tip.offsetWidth - 14;
+    tip.style.left = left + 'px'; tip.style.top = top + 'px';
+  });
+  svg.addEventListener('mouseleave', hideTip);
+
+  // controls
+  const $ = id => document.getElementById(id);
+  const outs = {
+    future: v => `${v}`,
+    gap: v => `${v} yrs`,
+    k: v => `half its gain in ${Math.round(1.718 * v)} yrs`,
+    r: v => `${v}% / yr`,
+    drift: v => `${v > 0 ? '+' : ''}${(v / 10).toFixed(1)}% / yr`
+  };
+  for (const id of ['future', 'gap', 'k', 'r', 'drift']) {
+    $(id).addEventListener('input', e => { st[id] = +e.target.value; $('o-' + id).textContent = outs[id](st[id]); render(); });
+  }
+  $('verifier').addEventListener('change', e => { st.verifier = e.target.checked; render(); });
+  $('reset').addEventListener('click', () => {
+    Object.assign(st, DEF);
+    for (const id of ['future', 'gap', 'k', 'r', 'drift']) { $(id).value = DEF[id]; $('o-' + id).textContent = outs[id](DEF[id]); }
+    $('verifier').checked = false;
+    render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>

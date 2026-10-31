@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="The dial: closed skills to open skills">
+<style>
+  :root { --ink:#1c1b19; --muted:#6b675f; --rule:#e4e0d8; --paper:#fcfcfb; --water:#2a78d6; --warm:#d9602a; --tint:#eef1f6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e5df; --muted:#9a968e; --rule:#2b2b33; --paper:#161615; --water:#4a90e2; --warm:#e8743f; --tint:#1d2733; } }
+  .t { font-family: 'Newsreader Variable', Georgia, 'Times New Roman', serif; fill: var(--ink); }
+  .s { font-family: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; fill: var(--muted); }
+  .ink { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .muted { stroke: var(--muted); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .rule { stroke: var(--rule); fill: none; stroke-width: 1; }
+  .water { stroke: var(--water); fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .warm { stroke: var(--warm); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .dash { stroke-dasharray: 4 5; }
+  .fill-tint { fill: var(--tint); }
+  .fill-rule { fill: var(--rule); }
+  .fill-paper { fill: var(--paper); }
+</style>
+<path d="M190,232 A190,190 0 0 1 570,232" class="ink"/>
+<circle cx="190.3749215986284" cy="220.06980128943042" r="4" class="ink"/>
+<circle cx="190.3749215986284" cy="220.06980128943042" r="2.2" class="fill-paper" stroke="none"/>
+<text x="168.41833357320644" y="222.6884098597855" class="t" font-size="13" text-anchor="end">arithmetic</text>
+<circle cx="197.5441997213808" cy="178.99168985254647" r="4" class="ink"/>
+<circle cx="197.5441997213808" cy="178.99168985254647" r="2.2" class="fill-paper" stroke="none"/>
+<text x="176.41773863648808" y="176.85388551968344" class="t" font-size="13" text-anchor="end">tic-tac-toe</text>
+<circle cx="216.45901486925072" cy="135.28213100742943" r="4" class="ink"/>
+<circle cx="216.45901486925072" cy="135.28213100742943" r="2.2" class="fill-paper" stroke="none"/>
+<text x="197.52269027516397" y="128.08321986092125" class="t" font-size="13" text-anchor="end">chess</text>
+<circle cx="254.3507455885062" cy="89.47889677021269" r="4" class="ink"/>
+<circle cx="254.3507455885062" cy="89.47889677021269" r="2.2" class="fill-paper" stroke="none"/>
+<text x="239.80188455138583" y="76.97645323834257" class="t" font-size="13" text-anchor="end">code with tests</text>
+<circle cx="299.10193460263616" cy="60.082860031456306" r="4" class="ink"/>
+<circle cx="299.10193460263616" cy="60.082860031456306" r="2.2" class="fill-paper" stroke="none"/>
+<text x="289.73479018820456" y="44.176664877203876" class="t" font-size="13" text-anchor="end">a proof in Lean</text>
+<circle cx="391.9301987105696" cy="42.37492159862839" r="4" class="ink"/>
+<circle cx="391.9301987105696" cy="42.37492159862839" r="2.2" class="fill-paper" stroke="none"/>
+<text x="393.3115901402145" y="24.41833357320644" class="t" font-size="13" text-anchor="middle">a legal brief</text>
+<circle cx="449.9436650100888" cy="55.34246768123225" r="4" class="ink"/>
+<circle cx="449.9436650100888" cy="55.34246768123225" r="2.2" class="fill-paper" stroke="none"/>
+<text x="458.0424051691517" y="38.88738499169071" class="t" font-size="13" text-anchor="start">a diagnosis</text>
+<circle cx="526.3975161274" cy="110.88944194774896" r="4" class="ink"/>
+<circle cx="526.3975161274" cy="110.88944194774896" r="2.2" class="fill-paper" stroke="none"/>
+<text x="543.3488074684674" y="100.8661141732778" class="t" font-size="13" text-anchor="start">a stageplay</text>
+<circle cx="551.9171399685437" cy="151.10193460263616" r="4" class="ink"/>
+<circle cx="551.9171399685437" cy="151.10193460263616" r="2.2" class="fill-paper" stroke="none"/>
+<text x="571.8233351227962" y="145.73479018820458" class="t" font-size="13" text-anchor="start">a eulogy</text>
+<circle cx="567.6607847130762" cy="202.2774516423561" r="4" class="ink"/>
+<circle cx="567.6607847130762" cy="202.2774516423561" r="2.2" class="fill-paper" stroke="none"/>
+<text x="589.3899282061692" y="202.83589341147103" class="t" font-size="13" text-anchor="start">a haiku</text>
+<text x="184" y="256" class="t" font-size="15" text-anchor="start" font-weight="600">closed</text>
+<text x="184" y="274" class="s" font-size="12" text-anchor="start">a program grades it</text>
+<text x="576" y="256" class="t" font-size="15" text-anchor="end" font-weight="600">open</text>
+<text x="576" y="274" class="s" font-size="12" text-anchor="end">a person grades it</text>
+<text x="380" y="238" class="s" font-size="12" text-anchor="middle">Can a program tell right from wrong?</text>
+<text x="380" y="256" class="s" font-size="12" text-anchor="middle">Is checking cheaper than trying?</text>
+<text x="380" y="274" class="s" font-size="12" text-anchor="middle">Does the question hold still?</text>
+<text x="30" y="26" class="t" font-size="18" text-anchor="start" font-weight="500">The dial</text>
+</svg>

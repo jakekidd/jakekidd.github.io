@@ -1,0 +1,409 @@
+{
+ "series": "When the promises come due: the AI buildout's spend, financing, signed leases and carrying cost",
+ "unit": "nominal US$ billions unless a field says otherwise",
+ "description": "Inputs for the promises interactive (src/viz/promises.js). Measured figures are from company filings (SEC XBRL and 10-Q text, fetched 2026-10-20), the Bank of England, Bain and Epoch AI pages fetched the same day, and figures already sourced in drafts/economic-context.md and drafts/store.md. Anything that rests on secondhand reporting or on the editor's brief (drafts/scratch/army/06-money-and-buildout.md) without a re-fetch carries (v) in its note. Editorial assumptions are labeled 'assumption'.",
+ "license": "Compiled for this post from the cited sources; facts only.",
+ "retrieved": "2026-10-20",
+ "sources": [
+  "https://www.bankofengland.co.uk/financial-stability-report/2025/december-2025",
+  "https://data.sec.gov/api/xbrl/companyconcept/CIK0000789019/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+  "https://data.sec.gov/api/xbrl/companyconcept/CIK0001652044/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+  "https://data.sec.gov/api/xbrl/companyconcept/CIK0001018724/us-gaap/PaymentsToAcquireProductiveAssets.json",
+  "https://data.sec.gov/api/xbrl/companyconcept/CIK0001326801/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+  "https://data.sec.gov/api/xbrl/companyconcept/CIK0001341439/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+  "https://data.sec.gov/api/xbrl/companyconcept/CIK0001769628/us-gaap/PaymentsToAcquirePropertyPlantAndEquipment.json",
+  "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+  "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+  "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+  "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+  "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+  "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm",
+  "https://www.bain.com/insights/how-can-we-meet-ais-insatiable-demand-for-compute-power-technology-report-2025/",
+  "https://www.bain.com/insights/new-innovation-is-required-to-fund-ais-6-trillion-buildout-technology-report-2026/",
+  "https://www.bain.com/insights/ai-data-center-boom-can-we-build-it-if-they-come-technology-report-2026/",
+  "https://epoch.ai/gradient-updates/an-update-on-ais-most-important-number",
+  "https://www.imf.org/-/media/files/publications/gfsr/2026/october/english/ch1.pdf",
+  "https://exponentialview.co/p/the-state-of-the-ai-economy"
+ ],
+ "caveats": [
+  "The model counts depreciation and interest, not power, staff or the labs' own costs; the compute share of revenue stands in for those.",
+  "Revenue is industry-wide and deduplicated, not any one company's.",
+  "The spend shape, the split of the non-Morgan-Stanley 24% of financing, the vendor rate, the fade rate and the 20-year building write-off are editorial assumptions, labeled on the page.",
+  "This is a model of promises and when they come due. It does not predict prices, defaults, or any company's solvency, and it is not financial advice."
+ ],
+ "guess_total": {
+  "label": "Total buildout spend, 2025 to 2030 (buildings, chips, power)",
+  "min": 2000,
+  "max": 10000,
+  "step": 100,
+  "markers": [
+   {
+    "id": "ms",
+    "label": "Morgan Stanley",
+    "lo": 2900,
+    "hi": 2900,
+    "measures": "AI infrastructure spending, 2025 to 2028 (four years, not six)",
+    "source": "https://www.bankofengland.co.uk/financial-stability-report/2025/december-2025",
+    "note": "Cited by the Bank of England, Dec 2025 FSR."
+   },
+   {
+    "id": "boe",
+    "label": "Bank of England",
+    "lo": 5000,
+    "hi": 5000,
+    "plus": true,
+    "measures": "AI infrastructure spending over the next five years, 'by some industry estimates'",
+    "source": "https://www.bankofengland.co.uk/financial-stability-report/2025/december-2025",
+    "note": "Text: could exceed $5 trillion."
+   },
+   {
+    "id": "bain",
+    "label": "Bain",
+    "lo": 5000,
+    "hi": 6500,
+    "measures": "data centers to 2030, about 150 GW of new compute",
+    "source": "https://www.bain.com/insights/ai-data-center-boom-can-we-build-it-if-they-come-technology-report-2026/",
+    "note": "Sept 29, 2026 (Bain; Bloomberg)."
+   }
+  ],
+  "context": [
+   {
+    "label": "Big-four 2026 capex guidance",
+    "lo": 720,
+    "hi": 745,
+    "note": "Company guidance, Goldman, Moody's; $785-800B with Oracle."
+   },
+   {
+    "label": "2027 capex consensus",
+    "value": 1100,
+    "note": "Consensus; Goldman $1.2T, UBS $1.45T."
+   },
+   {
+    "label": "Leases signed, not yet started (mid-2026)",
+    "value": 1186,
+    "note": "Sum of the leases table below including Meta's $68B signed in July."
+   }
+  ],
+  "fallback": 5500
+ },
+ "guess_spent": {
+  "label": "Spent so far, Jan 2025 to Jun 2026",
+  "min": 0,
+  "max": 2000,
+  "step": 10,
+  "measured": 766,
+  "parts": [
+   {
+    "label": "Microsoft, Alphabet, Amazon, Meta, 2025",
+    "value": 376.1,
+    "note": "XBRL cash capex, quarterly differences of year-to-date values; matches drafts/store.md ($376B)."
+   },
+   {
+    "label": "Same four, H1 2026",
+    "value": 294.8,
+    "note": "XBRL; matches drafts/store.md ($295B)."
+   },
+   {
+    "label": "Oracle, fiscal quarters ending Feb 2025 to May 2026",
+    "value": 70.6,
+    "note": "XBRL: 5.86 + 9.08 + 8.50 + 12.03 + 18.64 + 16.49."
+   },
+   {
+    "label": "CoreWeave, 2025 to H1 2026",
+    "value": 24.4,
+    "note": "XBRL: 1.41 + 2.45 + 2.39 + 4.06 + 7.70 + 6.42. Understates its spending: much of its equipment is vendor-financed."
+   }
+  ],
+  "note": "A floor, not a total: cash purchases of property and equipment only. Excludes finance-lease additions (material at Microsoft), xAI, OpenAI's partners, Chinese and sovereign builders, and non-US filers. Not all of it is AI. Amazon's tag is PaymentsToAcquireProductiveAssets."
+ },
+ "actual_spend_by_year": [
+  {
+   "year": 2025,
+   "value": 421.8,
+   "note": "Big four + Oracle (fiscal quarters ending Feb to Nov 2025) + CoreWeave, XBRL."
+  },
+  {
+   "year": 2026,
+   "value": 344.0,
+   "half": true,
+   "note": "H1 2026 only, same companies (Oracle quarters ending Feb and May 2026)."
+  }
+ ],
+ "defaults": {
+  "chipLife": {
+   "value": 6,
+   "min": 2,
+   "max": 6,
+   "markers": [
+    {
+     "value": 6,
+     "label": "book policy"
+    },
+    {
+     "value": 5,
+     "label": "Amazon, part of its fleet"
+    },
+    {
+     "value": 3,
+     "label": "Burry"
+    }
+   ],
+   "note": "Chip life: the builders carry chips as lasting five or six years (10-Ks); Amazon moved part of its fleet back to five; Michael Burry argues two to three. An A100 from 2020 still rents at six years old."
+  },
+  "hwShare": {
+   "value": 0.5,
+   "note": "Bank of England, Dec 2025: AI chips 'comprise around half of AI data centre costs'."
+  },
+  "buildingLife": {
+   "value": 20,
+   "note": "assumption: between CoreWeave's ~12 years left on building leases and buildings that last decades (drafts/store.md)."
+  },
+  "delay": {
+   "value": 0,
+   "min": 0,
+   "max": 3,
+   "note": "No source gives an industry-wide average wait; default 0. Power plants that came online in 2025 waited a median of over five years to connect (drafts/store.md)."
+  },
+  "mix": {
+   "ocf": 0.48,
+   "spv": 0.28,
+   "ig": 0.12,
+   "neo": 0.06,
+   "vendor": 0.02,
+   "equity": 0.04,
+   "note": "Morgan Stanley via the Bank of England: $2.9T 2025-28, $1.5T from external capital including $800B of private credit, so about 48% from the builders' own cash and 28% private credit (here: SPV and project debt). The split of the remaining 24% (IG bonds 12, neocloud debt 6, vendor-supported 2, outside equity 4) is the author's allocation, an assumption."
+  },
+  "rates": {
+   "ig": 0.0606,
+   "spv": 0.06581,
+   "neo": 0.097,
+   "vendor": 0.08,
+   "note": "IG: 10-year Treasury ~5.20% plus IG spread ~0.86% (Treasury par curve; ICE BofA via FRED, Oct 13-14). SPV: Hyperion's 6.58% bonds to 2049 (6.581% per IFR). Neocloud: CoreWeave's 9.625% 2032 and 9.75% 2031 notes (CNBC); they yielded 15-16% on Oct 14-15. Vendor: 8%, assumption."
+  },
+  "r2026": {
+   "value": 200,
+   "min": 50,
+   "max": 500,
+   "note": "(v) The author's interpolation of Exponential View's deduplicated series (trailing twelve months $161B in Sept 2026, run rate $276B); the EV page was not reachable for a re-check. For scale: OpenAI ~$50B run rate (FT) and Anthropic $16.8B in Q3 alone (FT, Bloomberg, Reuters)."
+  },
+  "growth": {
+   "value": 2.5,
+   "note": "Epoch AI (fetched): OpenAI plus Anthropic tripled in 2024, grew more than fourfold in 2025, and 3.5x so far in 2026 ($30B to $105B combined); 3.5x = +250%."
+  },
+  "fade": {
+   "value": 0.4,
+   "min": 0,
+   "max": 0.7,
+   "note": "Assumption: each year's growth is 40% smaller than the last. At 40% revenue reaches about $1.9T in 2030; at 60% it levels off near $1T."
+  },
+  "computeShare": {
+   "value": 0.59,
+   "min": 0.25,
+   "max": 1,
+   "note": "Anthropic's reported $1.70 of revenue per $1 of compute in Q3 2026 (FT, Oct 15): 1 / 1.70 = 59%. Bain assumes sustainable capex is about 25% of revenue."
+  },
+  "utilization": {
+   "value": 0.98,
+   "min": 0.4,
+   "max": 1,
+   "base": 0.98,
+   "note": "Share of built capacity that is rented. Base 98%: in the big markets less than two percent of data-center space is vacant (CBRE H1 2026: 1.4% primary-market vacancy; JLL about 1%, (v) not re-fetched). That is colocation space with power, not chips in use. The model scales revenue from 2027 in proportion to rented capacity."
+  },
+  "localShare": {
+   "value": 0,
+   "min": 0,
+   "max": 0.6,
+   "note": "Share of demand served on users' own machines by 2030, ramping from 0 in 2026. No published measure found; default 0, the reader's scenario. Related but different: open-weight models are about a third of enterprise tokens (ETR, (v)) or 11% (Menlo Ventures); most of those still run in data centers."
+  }
+ },
+ "overlays": [
+  {
+   "year": 2030,
+   "value": 2000,
+   "label": "Bain 2025: $2T a year",
+   "note": "Fetched: '$500 billion of annual capex corresponds to $2 trillion in annual revenue', still $800B short after AI savings.",
+   "source": "https://www.bain.com/insights/how-can-we-meet-ais-insatiable-demand-for-compute-power-technology-report-2025/"
+  },
+  {
+   "year": 2031,
+   "value": 6000,
+   "label": "Bain 2026: ~$6T a year",
+   "note": "Annual AI revenue needed by 2031 at capex of about 25% of revenue (Bain, Sept 29, 2026).",
+   "source": "https://www.bain.com/insights/new-innovation-is-required-to-fund-ais-6-trillion-buildout-technology-report-2026/"
+  }
+ ],
+ "financing": {
+  "imf": {
+   "equity": 300,
+   "debt": 650,
+   "promised_revenue": 1400,
+   "note": "IMF GFSR Oct 2026, ch. 1: fourteen public deals since 2023, about $300B of equity and $650B of debt for $1.4T of future revenue commitments.",
+   "source": "https://www.imf.org/-/media/files/publications/gfsr/2026/october/english/ch1.pdf"
+  },
+  "ms": {
+   "total": 2900,
+   "external": 1500,
+   "private_credit": 800,
+   "note": "Morgan Stanley via the Bank of England: of $2.9T (2025-28), $1.5T external 'across (mostly) debt and equity', including $800B from private credit.",
+   "source": "https://www.bankofengland.co.uk/financial-stability-report/2025/december-2025"
+  }
+ },
+ "leases_not_commenced": [
+  {
+   "company": "Microsoft",
+   "as_of": "2026-06-30",
+   "amount": 329.1,
+   "from": 2027,
+   "to": 2033,
+   "term_min": 1,
+   "term_max": 20,
+   "note": "(v) FY2027 to FY2033 hand-extracted from the 10-K for this post; not re-checked. Includes some arrangements subject to contractual conditions.",
+   "source": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm"
+  },
+  {
+   "company": "Oracle",
+   "as_of": "2026-08-31",
+   "amount": 288,
+   "from": 2026,
+   "to": 2029,
+   "term_min": 15,
+   "term_max": 19,
+   "note": "(v) Q2 FY2027 to FY2029 hand-extracted from the filing for this post; not re-checked.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm"
+  },
+  {
+   "company": "Meta",
+   "as_of": "2026-06-30",
+   "amount": 278.99,
+   "from": 2026,
+   "to": 2036,
+   "term_min": 1,
+   "term_max": 30,
+   "note": "Fetched: 'approximately $278.99 billion ... will commence during the remainder of 2026 through 2036 with lease terms ranging from greater than one year to 30 years.'",
+   "source": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+  },
+  {
+   "company": "Meta (July)",
+   "as_of": "2026-07-31",
+   "amount": 68,
+   "from": 2027,
+   "to": 2028,
+   "term_min": 18,
+   "term_max": 20,
+   "note": "Fetched: July 2026 leases of about $68B, commencing 2027 and 2028, terms of 18 to 20 years.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm"
+  },
+  {
+   "company": "Amazon",
+   "as_of": "2026-06-30",
+   "amount": 137.214,
+   "from": null,
+   "to": null,
+   "term_min": null,
+   "term_max": null,
+   "payments": {
+    "2026H2": 4.018,
+    "2027": 11.732,
+    "2028": 9.278,
+    "2029": 9.483,
+    "2030": 9.227,
+    "later": 93.476
+   },
+   "note": "Fetched: commitments table row 'Leases not yet commenced'. Amazon gives payments by year, not terms.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+  },
+  {
+   "company": "Alphabet",
+   "as_of": "2026-06-30",
+   "amount": 85.2,
+   "from": 2026,
+   "to": 2031,
+   "term_min": 1,
+   "term_max": 26,
+   "note": "(v) hand-extracted from the filing for this post; not re-checked.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+  }
+ ],
+ "leases_note": "Undiscounted future payments under leases signed but not started. At year-end 2025 the five companies' total was $662B, which Moody's called implicit debt.",
+ "ladder": [
+  {
+   "id": "neo",
+   "who": "Neocloud lenders and bondholders",
+   "holds": "GPU-backed loans and high-yield notes",
+   "promise": "loans 5-6 years against ~5-year contracts, ~12 years left on building leases, chips on a one-year cycle",
+   "numbers": "CoreWeave debt $35B in June (10-Q); its notes due 2031 and 2032 fell to about 78 cents in mid-October (CNBC).",
+   "due": [
+    2030,
+    2032
+   ]
+  },
+  {
+   "id": "pc",
+   "who": "Private-credit funds, and the insurers and pensions behind them",
+   "holds": "loans to developers, SPVs and chip-leasing vehicles",
+   "promise": "chip-lease debt matched to five-year leases; long bond allocations",
+   "numbers": "Morgan Stanley: $800B of the buildout from private credit (BoE). PIMCO bought $18B of Meta's Hyperion bonds (WSJ). Blackstone funds took $9B of ~$18B of subordinated debt on Anthropic's five-year TPU lease at 10% (FT, reported secondhand, (v)).",
+   "due": [
+    2026,
+    2031
+   ]
+  },
+  {
+   "id": "bank",
+   "who": "Banks",
+   "holds": "construction and syndicated loans",
+   "promise": "construction-period loans, refinanced when a site is finished (assumption on the window)",
+   "numbers": "About $1.3T of data-center debt, including $428B of utility and infrastructure loans and $225B syndicated; top lenders TD $26.8B, Goldman $16.5B, JPMorgan $13.3B; direct exposure about 0.8% of bank assets (Chicago Fed; Bisnow; American Banker).",
+   "due": [
+    2026,
+    2030
+   ]
+  },
+  {
+   "id": "vendor",
+   "who": "Chip vendors as guarantors",
+   "holds": "guarantees on customers' lease payments",
+   "promise": "20-year lease guarantees against a one-year product cycle",
+   "numbers": "Nvidia guarantees up to $105B of OpenAI's payments on twenty-year leases for a campus in Ohio (Nvidia 10-Q); phases start in FY2029 (v).",
+   "due": [
+    2028,
+    2048
+   ]
+  },
+  {
+   "id": "spv",
+   "who": "SPV and project bondholders",
+   "holds": "bonds on campuses leased to a hyperscaler",
+   "promise": "a 2049 bond against a lease that runs four years at a time",
+   "numbers": "Hyperion: $27.3B of 6.58% bonds to 2049; Meta's lease starts in 2029 and renews in four-year blocks to twenty; residual value guarantee about $28B; Meta's maximum exposure $46B (Meta 10-K and 10-Q; bond terms per IFR). $120B-plus has moved into such vehicles (FT via Quinn Emanuel, (v)).",
+   "due": [
+    2029,
+    2049
+   ]
+  },
+  {
+   "id": "ig",
+   "who": "Investment-grade bondholders of the builders",
+   "holds": "senior unsecured notes",
+   "promise": "to the 2060s; over 40% of 2026 hyperscaler paper is 20 years or longer",
+   "numbers": "About $220B of IG bonds from five hyperscalers in 2026 (JPMorgan, BNP via Reuters). Alphabet's long-term debt went from $12B (Dec 2024) to $101B (Jun 2026) (SEC XBRL).",
+   "due": [
+    2030,
+    2066
+   ]
+  },
+  {
+   "id": "equity",
+   "who": "Shareholders of the builders",
+   "holds": "the residual: capex paid from operating cash flow",
+   "promise": "no maturity; first to absorb any shortfall",
+   "numbers": "About 48% of the buildout comes from the builders' own cash (Morgan Stanley via the BoE). Capex was 96% of the big four's operating cash flow in Q2 2026 (SEC XBRL).",
+   "due": [
+    2025,
+    2035
+   ]
+  }
+ ],
+ "ladder_note": "Lit when a year with a shortfall in your scenario falls inside the rung's due window. Not sourced and left out: a dollar split of the debt by holder type (how much sits with insurers versus pensions versus banks). No source found gives one.",
+ "provenance": "Figures not fetched on 2026-10-20 were taken from the author's research files, which carry the original citations: drafts/economic-context.md (dashboard, Oct 15-20, 2026), drafts/store.md (section 6, 'Is it a bubble?') and the editor's brief drafts/scratch/army/06-money-and-buildout.md (filing extractions). Fetched and checked on 2026-10-20: the Bank of England FSR text, the six XBRL capex series, Meta's and Amazon's lease-not-commenced disclosures, Bain 2025, Epoch AI's growth figures."
+}

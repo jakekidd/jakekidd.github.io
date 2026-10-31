@@ -1,0 +1,398 @@
+{
+ "series": "Capability-relevant events to mark on the charts",
+ "unit": "none (value is null for every event)",
+ "description": "Dated events, each with a type: architecture, training recipe, scaling, release event (a company releasing or announcing a result, often developed privately, all at once), plus three extra types used here: measurement (a change in how a chart's metric is computed or published), demonstration (a third party using a released model), claim (a public claim later withdrawn). release_event is true where a chart jump, or a result with no chart point, coincides with a company disclosing something it had developed out of view; dump is true for the Oct 6, 2026 math release.",
+ "license": "Compiled for this post from the cited sources; facts only.",
+ "retrieved": "2026-10-19",
+ "sources": [
+  "https://arcprize.org/blog/oai-o3-pub-breakthrough",
+  "https://arena.ai/blog/leaderboard-changelog/",
+  "https://arxiv.org/abs/1706.03762",
+  "https://arxiv.org/abs/2001.08361",
+  "https://arxiv.org/abs/2005.14165",
+  "https://arxiv.org/abs/2203.02155",
+  "https://arxiv.org/abs/2203.15556",
+  "https://arxiv.org/abs/2303.08774",
+  "https://arxiv.org/abs/2501.12948",
+  "https://arxiv.org/abs/2503.14499",
+  "https://arxiv.org/abs/2605.20579",
+  "https://arxiv.org/abs/2605.20695",
+  "https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/",
+  "https://deepmind.google/research/breakthroughs/alphago/",
+  "https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_priority_controversy",
+  "https://epoch.ai/benchmarks/frontiermath",
+  "https://epoch.ai/data/benchmark_data.zip (arc_agi_external.csv)",
+  "https://github.com/openai/math",
+  "https://github.com/openai/math/blob/main/CONTENTS.md",
+  "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+  "https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard",
+  "https://lmsys.org/blog/2023-05-03-arena/",
+  "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+  "https://metr.org/time-horizons/",
+  "https://openai.com/index/chatgpt/",
+  "https://openai.com/index/gpt-4-research/",
+  "https://openai.com/index/instruction-following/",
+  "https://openai.com/index/learning-to-reason-with-llms/",
+  "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+  "https://retractionwatch.com/2026/10/08/openai-withdraws-preprints-722-manuscripts-unsolved-math-problems/",
+  "https://the-decoder.com/leading-openai-researcher-announced-a-gpt-5-math-breakthrough-that-never-happened/",
+  "https://words.filippo.io/seeds-solved/",
+  "https://www.anthropic.com/claude-mythos-preview-system-card",
+  "https://www.anthropic.com/glasswing",
+  "https://www.anthropic.com/research/ecdsa-curve-origins",
+  "https://www.claymath.org/millennium/navier-stokes-equation/",
+  "https://www.euronews.com/2026/10/02/ai-decodes-217-year-old-napoleonic-letter-in-6-hours",
+  "https://www.nature.com/articles/nature16961",
+  "https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/"
+ ],
+ "caveats": [
+  "Release events mark disclosure dates, not development dates: a jump at a release event says when the public learned of a capability, so it overstates the speed of change at that moment and understates it before.",
+  "Several 2026 events concern unreleased models whose compute, attempts and failure counts are undisclosed; they cannot be placed on a capability curve.",
+  "Items marked (v) were taken secondhand (press, Wikipedia, or the post's own research files) rather than from the primary page."
+ ],
+ "points": [
+  {
+   "date": "2016-03-09",
+   "value": null,
+   "model": "AlphaGo (DeepMind)",
+   "source": "https://www.nature.com/articles/nature16961",
+   "note": "Five-game match Mar 9 to 15, 2016, won 4 to 1. Policy and value networks trained on human games, then improved by self-play reinforcement learning against the game result: the canonical answer-key domain.",
+   "type": "training recipe",
+   "label": "AlphaGo beats Lee Sedol",
+   "release_event": false,
+   "sources": [
+    "https://www.nature.com/articles/nature16961",
+    "https://deepmind.google/research/breakthroughs/alphago/"
+   ]
+  },
+  {
+   "date": "2017-06-12",
+   "value": null,
+   "model": "Vaswani et al., \"Attention Is All You Need\" (Google)",
+   "source": "https://arxiv.org/abs/1706.03762",
+   "note": "arXiv v1 June 12, 2017. The architecture behind every model in these charts.",
+   "type": "architecture",
+   "label": "Transformer",
+   "release_event": false,
+   "sources": [
+    "https://arxiv.org/abs/1706.03762"
+   ]
+  },
+  {
+   "date": "2020-01-23",
+   "value": null,
+   "model": "Kaplan et al. (OpenAI)",
+   "source": "https://arxiv.org/abs/2001.08361",
+   "note": "Loss falls as a power law in parameters, data and compute: steady improvement that is diminishing returns written as a formula.",
+   "type": "scaling",
+   "label": "Neural scaling laws",
+   "release_event": false,
+   "sources": [
+    "https://arxiv.org/abs/2001.08361"
+   ]
+  },
+  {
+   "date": "2020-05-28",
+   "value": null,
+   "model": "GPT-3 175B (OpenAI)",
+   "source": "https://arxiv.org/abs/2005.14165",
+   "note": "arXiv v1 May 28, 2020. Few-shot ability from scale alone. METR dates its davinci-002 stand-in to this day (0.14 min horizon).",
+   "type": "scaling",
+   "label": "GPT-3",
+   "release_event": false,
+   "sources": [
+    "https://arxiv.org/abs/2005.14165"
+   ]
+  },
+  {
+   "date": "2022-01-27",
+   "value": null,
+   "model": "InstructGPT (OpenAI)",
+   "source": "https://openai.com/index/instruction-following/",
+   "note": "Blog post Jan 27, 2022; paper (Ouyang et al.) arXiv v1 Mar 4, 2022. Fine-tuning on human demonstrations and human preference rankings (RLHF): people become the grader, the recipe behind every chatbot since.",
+   "type": "training recipe",
+   "label": "InstructGPT / RLHF",
+   "release_event": false,
+   "sources": [
+    "https://openai.com/index/instruction-following/",
+    "https://arxiv.org/abs/2203.02155"
+   ],
+   "paper_date": "2022-03-04"
+  },
+  {
+   "date": "2022-03-29",
+   "value": null,
+   "model": "Chinchilla 70B (DeepMind)",
+   "source": "https://arxiv.org/abs/2203.15556",
+   "note": "Hoffmann et al.: for a fixed compute budget, train smaller models on more data; resets the scaling recipe.",
+   "type": "scaling",
+   "label": "Chinchilla (compute-optimal scaling)",
+   "release_event": false,
+   "sources": [
+    "https://arxiv.org/abs/2203.15556"
+   ]
+  },
+  {
+   "date": "2022-11-30",
+   "value": null,
+   "model": "ChatGPT (GPT-3.5 + RLHF, OpenAI)",
+   "source": "https://openai.com/index/chatgpt/",
+   "note": "Public release of an RLHF chat model; the start of mass use, not a capability jump on these benchmarks.",
+   "type": "release event",
+   "label": "ChatGPT",
+   "release_event": true,
+   "sources": [
+    "https://openai.com/index/chatgpt/"
+   ]
+  },
+  {
+   "date": "2023-03-14",
+   "value": null,
+   "model": "GPT-4 (OpenAI)",
+   "source": "https://openai.com/index/gpt-4-research/",
+   "note": "Released Mar 14, 2023 (technical report arXiv 2303.08774). The anchor model for the LMArena gap in preference.json and a METR point (4.0 min, TH1.1).",
+   "type": "scaling",
+   "label": "GPT-4",
+   "release_event": false,
+   "sources": [
+    "https://openai.com/index/gpt-4-research/",
+    "https://arxiv.org/abs/2303.08774"
+   ]
+  },
+  {
+   "date": "2023-05-03",
+   "value": null,
+   "model": "LMSYS Chatbot Arena",
+   "source": "https://lmsys.org/blog/2023-05-03-arena/",
+   "note": "First public Elo leaderboard (open models only); proprietary models first appear in the May 8, 2023 snapshot.",
+   "type": "measurement",
+   "label": "Chatbot Arena leaderboard starts",
+   "release_event": false,
+   "sources": [
+    "https://lmsys.org/blog/2023-05-03-arena/",
+    "https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard"
+   ]
+  },
+  {
+   "date": "2024-01-09",
+   "value": null,
+   "model": "LMArena",
+   "source": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+   "note": "Per LMArena's dataset notes; the space snapshot files label ratings \"bt\" from Dec 6, 2023. The scale is relative either way.",
+   "type": "measurement",
+   "label": "Arena switches from Elo to Bradley-Terry",
+   "release_event": false,
+   "sources": [
+    "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+    "https://arena.ai/blog/leaderboard-changelog/"
+   ]
+  },
+  {
+   "date": "2024-09-12",
+   "value": null,
+   "model": "o1-preview, o1-mini (OpenAI)",
+   "source": "https://openai.com/index/learning-to-reason-with-llms/",
+   "note": "Reinforcement learning against automatically checked answers (math, code), with long chains of thought. Release event: the method was developed privately before release (reported as Q* in Nov 2023 and \"Strawberry\" in July 2024 by Reuters (v)), and the benchmark jump arrives on release day: Epoch MATH Level 5 53% to 89%, OTIS Mock AIME 10% to 47%.",
+   "type": "training recipe",
+   "label": "o1: reasoning via reinforcement learning",
+   "release_event": true,
+   "sources": [
+    "https://openai.com/index/learning-to-reason-with-llms/"
+   ]
+  },
+  {
+   "date": "2024-12-20",
+   "value": null,
+   "model": "o3-preview (OpenAI)",
+   "source": "https://arcprize.org/blog/oai-o3-pub-breakthrough",
+   "note": "Announced and scored by the ARC Prize on the semi-private set; the model was not released until Apr 16, 2025, and the released o3 scored lower (60.8% at high effort, 53.8% at medium, per Epoch's copy of the ARC Prize leaderboard).",
+   "type": "release event",
+   "label": "o3 announced (ARC-AGI-1 75.7%, 87.5% at high compute)",
+   "release_event": true,
+   "sources": [
+    "https://arcprize.org/blog/oai-o3-pub-breakthrough",
+    "https://epoch.ai/data/benchmark_data.zip (arc_agi_external.csv)"
+   ]
+  },
+  {
+   "date": "2025-01-20",
+   "value": null,
+   "model": "DeepSeek-R1 (DeepSeek)",
+   "source": "https://arxiv.org/abs/2501.12948",
+   "note": "Open weights and a published method (paper arXiv 2501.12948, Jan 22, 2025): RL against automatic checks of math and code, four months after o1. The answer-key strength is easy to copy.",
+   "type": "training recipe",
+   "label": "DeepSeek-R1: the reasoning recipe goes public",
+   "release_event": false,
+   "sources": [
+    "https://arxiv.org/abs/2501.12948"
+   ]
+  },
+  {
+   "date": "2025-03-19",
+   "value": null,
+   "model": "METR",
+   "source": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+   "note": "Defines the 50% time horizon; reports doubling about every 7 months, 2019 to 2025.",
+   "type": "measurement",
+   "label": "METR time-horizon metric published",
+   "release_event": false,
+   "sources": [
+    "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/",
+    "https://arxiv.org/abs/2503.14499"
+   ]
+  },
+  {
+   "date": "2025-05-16",
+   "value": null,
+   "model": "LMArena",
+   "source": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+   "note": "Default leaderboard now discounts length and formatting effects; offset adjusted to keep the scale comparable (LMArena).",
+   "type": "measurement",
+   "label": "Arena makes style control the default",
+   "release_event": false,
+   "sources": [
+    "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+   ]
+  },
+  {
+   "date": "2025-07-19",
+   "value": null,
+   "model": "OpenAI experimental reasoning model; Gemini Deep Think (Google DeepMind)",
+   "source": "https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/",
+   "note": "OpenAI announced its result on July 19, 2025 (v, social-media post, not fetched); Google DeepMind's officially graded gold-medal result was announced July 21, 2025. Both were unreleased systems.",
+   "type": "release event",
+   "label": "Gold-medal score at the IMO by unreleased models",
+   "release_event": true,
+   "sources": [
+    "https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/"
+   ]
+  },
+  {
+   "date": "2025-10-17",
+   "value": null,
+   "model": "GPT-5 (OpenAI)",
+   "source": "https://the-decoder.com/leading-openai-researcher-announced-a-gpt-5-math-breakthrough-that-never-happened/",
+   "note": "OpenAI researchers posted that GPT-5 had solved ten open Erdos problems; erdosproblems.com's Thomas Bloom replied that \"open\" meant he knew no paper, and GPT-5 had found existing papers. Posts deleted (date Oct 17 or 18 per sources). A literature search, not new proofs.",
+   "type": "claim",
+   "label": "GPT-5 \"solved ten Erdos problems\" claim withdrawn",
+   "release_event": false,
+   "sources": [
+    "https://the-decoder.com/leading-openai-researcher-announced-a-gpt-5-math-breakthrough-that-never-happened/"
+   ]
+  },
+  {
+   "date": "2026-04-07",
+   "value": null,
+   "model": "Claude Mythos Preview (Anthropic)",
+   "source": "https://www.anthropic.com/glasswing",
+   "note": "Announced with Project Glasswing; Anthropic: it does \"not plan to make Claude Mythos Preview generally available\"; access limited to partners and vetted security organizations. METR's last and highest point (early version, at least 16 h, a lower bound).",
+   "type": "release event",
+   "label": "Claude Mythos Preview announced, not generally released",
+   "release_event": true,
+   "sources": [
+    "https://www.anthropic.com/glasswing",
+    "https://www.anthropic.com/claude-mythos-preview-system-card",
+    "https://metr.org/time-horizons/"
+   ]
+  },
+  {
+   "date": "2026-05-20",
+   "value": null,
+   "model": "internal unreleased OpenAI reasoning model",
+   "source": "https://arxiv.org/abs/2605.20695",
+   "note": "A disproof of Erdos's 1946 conjecture, checked by outside mathematicians in a companion paper (Alon, Bloom, Gowers, Litt, Sawin, Shankar, Tsimerman, Wang, Wood). OpenAI's announcement page could not be fetched here (blocked) and is cited from the post's research files (v).",
+   "type": "release event",
+   "label": "Unreleased OpenAI model disproves the unit distance conjecture",
+   "release_event": true,
+   "sources": [
+    "https://arxiv.org/abs/2605.20695",
+    "https://arxiv.org/abs/2605.20579",
+    "https://openai.com/index/model-disproves-discrete-geometry-conjecture/"
+   ]
+  },
+  {
+   "date": "2026-06-12",
+   "value": null,
+   "model": "Epoch AI",
+   "source": "https://epoch.ai/benchmarks/frontiermath",
+   "note": "Corrected errors affecting 42% of problems; v1 and v2 scores are not comparable.",
+   "type": "measurement",
+   "label": "FrontierMath v2",
+   "release_event": false,
+   "sources": [
+    "https://epoch.ai/benchmarks/frontiermath"
+   ]
+  },
+  {
+   "date": "2026-09-08",
+   "value": null,
+   "model": "METR",
+   "source": "https://metr.org/time-horizons/",
+   "note": "Page notice: \"no longer actively updated.\" Last model added May 8, 2026 (Claude Mythos Preview early). Measurements above 16 hours were already flagged unreliable.",
+   "type": "measurement",
+   "label": "METR stops updating its time-horizon page",
+   "release_event": false,
+   "sources": [
+    "https://metr.org/time-horizons/"
+   ]
+  },
+  {
+   "date": "2026-09-08",
+   "value": null,
+   "model": "internal OpenAI multi-agent system",
+   "source": "https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_priority_controversy",
+   "note": "Announced at noon Sept 8, 2026. Per OpenAI's post as summarized by Wikipedia (v): at least 10,000 agents, an 88-hour run from Sept 1, 2.7 million messages, 130 billion output tokens; Noam Brown: \"this result cost millions of dollars.\" It addresses the version with an external force; specialists and Scientific American (Sept 21) say the unforced problem is still open, and Clay lists it as open.",
+   "type": "release event",
+   "label": "OpenAI claims Navier-Stokes (forced version)",
+   "release_event": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_priority_controversy",
+    "https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/",
+    "https://www.claymath.org/millennium/navier-stokes-equation/"
+   ]
+  },
+  {
+   "date": "2026-10-02",
+   "value": null,
+   "model": "GPT-6 Astra (OpenAI), run by Carter Church (SentinelOne)",
+   "source": "https://www.euronews.com/2026/10/02/ai-decodes-217-year-old-napoleonic-letter-in-6-hours",
+   "note": "About six hours to transcribe and break the cipher, per Church (Euronews, Oct 2, 2026). A user-run demonstration with a released model.",
+   "type": "demonstration",
+   "label": "GPT-6 Astra decodes an 1809 cipher letter to Marmont",
+   "release_event": false,
+   "sources": [
+    "https://www.euronews.com/2026/10/02/ai-decodes-217-year-old-napoleonic-letter-in-6-hours"
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "value": null,
+   "model": "unreleased internal OpenAI model",
+   "source": "https://github.com/openai/math",
+   "note": "OpenAI posted 722 mathematics manuscripts to GitHub; about 4,000 problems posed; \"three hours of ChatGPT Pro thinking\" per kept result on average; about 42% of top-line results Lean-formalized (README); three withdrawn Oct 7 over one sign error (catalogue now 719). Total attempts, compute, prompts and model undisclosed. Released all at once: a dump of results produced over the preceding weeks (manuscripts dated mostly Sept 23 to 27 per the repository's CONTENTS.md, counted in the post's research notes), not a measured point on any curve.",
+   "type": "release event",
+   "label": "The math dump: 722 manuscripts in an afternoon",
+   "release_event": true,
+   "sources": [
+    "https://github.com/openai/math",
+    "https://retractionwatch.com/2026/10/08/openai-withdraws-preprints-722-manuscripts-unsolved-math-problems/",
+    "https://github.com/openai/math/blob/main/CONTENTS.md"
+   ],
+   "dump": true
+  },
+  {
+   "date": "2026-10-16",
+   "value": null,
+   "model": "unnamed internal Anthropic research model",
+   "source": "https://www.anthropic.com/research/ecdsa-curve-origins",
+   "note": "In under half an hour, showed the P-192 to P-521 seeds came from a 1990s C-library random-number routine seeded by a clock reading; reproduced by Filippo Valsorda (bounty organizer). One seed remains unexplained per the post's research notes.",
+   "type": "release event",
+   "label": "Anthropic model explains the NIST elliptic-curve seeds",
+   "release_event": true,
+   "sources": [
+    "https://www.anthropic.com/research/ecdsa-curve-origins",
+    "https://words.filippo.io/seeds-solved/"
+   ]
+  }
+ ]
+}
