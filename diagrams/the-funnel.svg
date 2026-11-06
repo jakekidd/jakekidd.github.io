@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 772 240" width="772" height="240" role="img" aria-label="The disclosed and undisclosed counts of the math release">
+<title>The disclosed and undisclosed counts of the math release</title>
+<style>
+  :root { --ink:#1c1b19; --muted:#6b675f; --rule:#e4e0d8; --paper:#fcfcfb; --water:#2a78d6; --warm:#d9602a; --tint:#eef1f6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e5df; --muted:#9a968e; --rule:#2b2b33; --paper:#161615; --water:#4a90e2; --warm:#e8743f; --tint:#1d2733; } }
+  .t { font-family: 'Newsreader Variable', Georgia, 'Times New Roman', serif; fill: var(--ink); }
+  .s { font-family: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; fill: var(--muted); }
+  .ink { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .muted { stroke: var(--muted); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .rule { stroke: var(--rule); fill: none; stroke-width: 1; }
+  .water { stroke: var(--water); fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .warm { stroke: var(--warm); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .dash { stroke-dasharray: 4 5; }
+  .fill-tint { fill: var(--tint); }
+  .fill-rule { fill: var(--rule); }
+  .fill-paper { fill: var(--paper); }
+</style>
+<rect x="24" y="60" width="80" height="72" rx="3" class="muted dash"/>
+<text x="64" y="92" class="s" font-size="24" text-anchor="middle" font-weight="500">?</text>
+<text x="64" y="112" class="s" font-size="10" text-anchor="middle">problems</text>
+<text x="64" y="124" class="s" font-size="10" text-anchor="middle">considered</text>
+<line x1="106" y1="96" x2="113" y2="96" class="muted"/><path d="M106.9,99.4 L113,96 L106.9,92.6" class="muted"/>
+<rect x="116" y="60" width="80" height="72" rx="3" class="ink"/>
+<text x="156" y="92" class="t" font-size="13" text-anchor="middle" font-weight="500">about 4,000</text>
+<text x="156" y="112" class="s" font-size="10" text-anchor="middle">problems</text>
+<text x="156" y="124" class="s" font-size="10" text-anchor="middle">posed</text>
+<line x1="198" y1="96" x2="205" y2="96" class="muted"/><path d="M198.9,99.4 L205,96 L198.9,92.6" class="muted"/>
+<rect x="208" y="60" width="80" height="72" rx="3" class="muted dash"/>
+<text x="248" y="92" class="s" font-size="24" text-anchor="middle" font-weight="500">?</text>
+<text x="248" y="116" class="s" font-size="10" text-anchor="middle">attempts</text>
+<line x1="290" y1="96" x2="297" y2="96" class="muted"/><path d="M290.9,99.4 L297,96 L290.9,92.6" class="muted"/>
+<rect x="300" y="60" width="80" height="72" rx="3" class="muted dash"/>
+<text x="340" y="92" class="s" font-size="24" text-anchor="middle" font-weight="500">?</text>
+<text x="340" y="112" class="s" font-size="10" text-anchor="middle">tokens</text>
+<text x="340" y="124" class="s" font-size="10" text-anchor="middle">spent</text>
+<line x1="382" y1="96" x2="389" y2="96" class="muted"/><path d="M382.9,99.4 L389,96 L382.9,92.6" class="muted"/>
+<rect x="392" y="60" width="80" height="72" rx="3" class="ink"/>
+<text x="432" y="92" class="t" font-size="20" text-anchor="middle" font-weight="500">372</text>
+<text x="432" y="112" class="s" font-size="10" text-anchor="middle">result</text>
+<text x="432" y="124" class="s" font-size="10" text-anchor="middle">families</text>
+<line x1="474" y1="96" x2="481" y2="96" class="muted"/><path d="M474.9,99.4 L481,96 L474.9,92.6" class="muted"/>
+<rect x="484" y="60" width="80" height="72" rx="3" class="ink"/>
+<text x="524" y="92" class="t" font-size="20" text-anchor="middle" font-weight="500">722</text>
+<text x="524" y="116" class="s" font-size="10" text-anchor="middle">manuscripts</text>
+<line x1="566" y1="96" x2="573" y2="96" class="muted"/><path d="M566.9,99.4 L573,96 L566.9,92.6" class="muted"/>
+<rect x="576" y="60" width="80" height="72" rx="3" class="ink"/>
+<text x="616" y="92" class="t" font-size="20" text-anchor="middle" font-weight="500">42%</text>
+<text x="616" y="112" class="s" font-size="10" text-anchor="middle">machine-</text>
+<text x="616" y="124" class="s" font-size="10" text-anchor="middle">checked</text>
+<line x1="658" y1="96" x2="665" y2="96" class="muted"/><path d="M658.9,99.4 L665,96 L658.9,92.6" class="muted"/>
+<rect x="668" y="60" width="80" height="72" rx="3" class="ink"/>
+<text x="708" y="92" class="t" font-size="20" text-anchor="middle" font-weight="500">3</text>
+<text x="708" y="116" class="s" font-size="10" text-anchor="middle">withdrawn</text>
+<text x="24" y="28" class="t" font-size="18" text-anchor="start" font-weight="500">What OpenAI disclosed about the October 6 release</text>
+<text x="24" y="176" class="s" font-size="12" text-anchor="start">Dashed boxes are the counts OpenAI has not published.</text>
+<text x="24" y="194" class="s" font-size="12" text-anchor="start">An average over the kept results says nothing about the discarded ones.</text>
+</svg>

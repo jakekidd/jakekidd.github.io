@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="The dial: closed skills to open skills">
+<title>The dial: closed skills to open skills</title>
+<style>
+  :root { --ink:#1c1b19; --muted:#6b675f; --rule:#e4e0d8; --paper:#fcfcfb; --water:#2a78d6; --warm:#d9602a; --tint:#eef1f6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e5df; --muted:#9a968e; --rule:#2b2b33; --paper:#161615; --water:#4a90e2; --warm:#e8743f; --tint:#1d2733; } }
+  .t { font-family: 'Newsreader Variable', Georgia, 'Times New Roman', serif; fill: var(--ink); }
+  .s { font-family: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; fill: var(--muted); }
+  .ink { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .muted { stroke: var(--muted); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .rule { stroke: var(--rule); fill: none; stroke-width: 1; }
+  .water { stroke: var(--water); fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .warm { stroke: var(--warm); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .dash { stroke-dasharray: 4 5; }
+  .fill-tint { fill: var(--tint); }
+  .fill-rule { fill: var(--rule); }
+  .fill-paper { fill: var(--paper); }
+</style>
+<path d="M190,232 A190,190 0 0 1 570,232" class="ink"/>
+<circle cx="190.1" cy="224.8" r="4" class="ink"/>
+<circle cx="190.1" cy="224.8" r="2.2" class="fill-paper" stroke="none"/>
+<text x="180.1" y="228.8" class="t" font-size="13" text-anchor="end">arithmetic</text>
+<circle cx="191.1" cy="211.2" r="4" class="ink"/>
+<circle cx="191.1" cy="211.2" r="2.2" class="fill-paper" stroke="none"/>
+<text x="201.1" y="216.5" class="t" font-size="13" text-anchor="start">tic-tac-toe</text>
+<circle cx="193.1" cy="197.6" r="4" class="ink"/>
+<circle cx="193.1" cy="197.6" r="2.2" class="fill-paper" stroke="none"/>
+<text x="183.3" y="200.0" class="t" font-size="13" text-anchor="end">checkers</text>
+<circle cx="196.0" cy="184.7" r="4" class="ink"/>
+<circle cx="196.0" cy="184.7" r="2.2" class="fill-paper" stroke="none"/>
+<text x="205.7" y="191.5" class="t" font-size="13" text-anchor="start">a sudoku</text>
+<circle cx="210.7" cy="145.7" r="4" class="ink"/>
+<circle cx="210.7" cy="145.7" r="2.2" class="fill-paper" stroke="none"/>
+<text x="201.8" y="145.5" class="t" font-size="13" text-anchor="end">chess</text>
+<circle cx="233.6" cy="110.9" r="4" class="ink"/>
+<circle cx="233.6" cy="110.9" r="2.2" class="fill-paper" stroke="none"/>
+<text x="241.3" y="121.6" class="t" font-size="13" text-anchor="start">a proof in Lean</text>
+<circle cx="273.2" cy="74.9" r="4" class="ink"/>
+<circle cx="273.2" cy="74.9" r="2.2" class="fill-paper" stroke="none"/>
+<text x="267.6" y="70.9" class="t" font-size="13" text-anchor="end">code with tests</text>
+<circle cx="327.0" cy="49.5" r="4" class="ink"/>
+<circle cx="327.0" cy="49.5" r="2.2" class="fill-paper" stroke="none"/>
+<text x="334.0" y="82.9" class="t" font-size="13" text-anchor="middle">a translation</text>
+<line x1="328.9" y1="56.3" x2="333.1" y2="70.7" class="muted"/>
+<circle cx="391.9" cy="42.4" r="4" class="ink"/>
+<circle cx="391.9" cy="42.4" r="2.2" class="fill-paper" stroke="none"/>
+<text x="392.6" y="29.5" class="t" font-size="13" text-anchor="middle">a legal brief</text>
+<circle cx="444.4" cy="53.2" r="4" class="ink"/>
+<circle cx="444.4" cy="53.2" r="2.2" class="fill-paper" stroke="none"/>
+<text x="435.9" y="86.1" class="t" font-size="13" text-anchor="middle">a diagnosis</text>
+<line x1="442.0" y1="59.8" x2="436.9" y2="73.9" class="muted"/>
+<circle cx="491.7" cy="78.3" r="4" class="ink"/>
+<circle cx="491.7" cy="78.3" r="2.2" class="fill-paper" stroke="none"/>
+<text x="497.6" y="74.5" class="t" font-size="13" text-anchor="start">an essay</text>
+<circle cx="530.1" cy="115.5" r="4" class="ink"/>
+<circle cx="530.1" cy="115.5" r="2.2" class="fill-paper" stroke="none"/>
+<text x="522.2" y="126.0" class="t" font-size="13" text-anchor="end">a stageplay</text>
+<circle cx="556.7" cy="162.1" r="4" class="ink"/>
+<circle cx="556.7" cy="162.1" r="2.2" class="fill-paper" stroke="none"/>
+<text x="566.0" y="162.7" class="t" font-size="13" text-anchor="start">a eulogy</text>
+<circle cx="568.1" cy="205.2" r="4" class="ink"/>
+<circle cx="568.1" cy="205.2" r="2.2" class="fill-paper" stroke="none"/>
+<text x="558.2" y="210.9" class="t" font-size="13" text-anchor="end">a haiku</text>
+<text x="184" y="256" class="t" font-size="15" text-anchor="start" font-weight="600">closed</text>
+<text x="184" y="274" class="s" font-size="12" text-anchor="start">a program grades it</text>
+<text x="576" y="256" class="t" font-size="15" text-anchor="end" font-weight="600">open</text>
+<text x="576" y="274" class="s" font-size="12" text-anchor="end">a person grades it</text>
+<text x="380" y="142" class="s" font-size="12" text-anchor="middle">Can a program check the answer?</text>
+<text x="380" y="160" class="s" font-size="12" text-anchor="middle">Is checking cheaper than trying?</text>
+<text x="380" y="178" class="s" font-size="12" text-anchor="middle">Does the question hold still?</text>
+<text x="30" y="26" class="t" font-size="18" text-anchor="start" font-weight="500">The dial</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 284" width="900" height="284" role="img" aria-label="The spectrum: closed tasks to open tasks">
+<title>The spectrum: closed tasks to open tasks</title>
+<style>
+  :root { --ink:#1c1b19; --muted:#6b675f; --rule:#e4e0d8; --paper:#fcfcfb; --water:#2a78d6; --warm:#d9602a; --tint:#eef1f6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e5df; --muted:#9a968e; --rule:#2b2b33; --paper:#161615; --water:#4a90e2; --warm:#e8743f; --tint:#1d2733; } }
+  .t { font-family: 'Newsreader Variable', Georgia, 'Times New Roman', serif; fill: var(--ink); }
+  .s { font-family: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; fill: var(--muted); }
+  .ink { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .muted { stroke: var(--muted); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .rule { stroke: var(--rule); fill: none; stroke-width: 1; }
+  .water { stroke: var(--water); fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .warm { stroke: var(--warm); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .dash { stroke-dasharray: 4 5; }
+  .fill-tint { fill: var(--tint); }
+  .fill-rule { fill: var(--rule); }
+  .fill-paper { fill: var(--paper); }
+</style>
+<defs>
+  <linearGradient id="spectrum-grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:var(--water)"/><stop offset="1" style="stop-color:var(--warm)"/></linearGradient>
+  <filter id="spectrum-grain" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 0 1" result="gray"/>
+    <feComponentTransfer in="gray" result="dust"><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+    <feComposite in="dust" in2="SourceAlpha" operator="in" result="clipped"/>
+    <feBlend in="clipped" in2="SourceGraphic" mode="overlay"/>
+  </filter>
+</defs>
+<rect x="70" y="140" width="760" height="34" rx="3" fill="url(#spectrum-grad)" filter="url(#spectrum-grain)"/>
+<text x="62" y="162" class="t" font-size="15" text-anchor="end" font-weight="600">closed</text>
+<text x="838" y="162" class="t" font-size="15" text-anchor="start" font-weight="600">open</text>
+<text x="70" y="240" class="s" font-size="12" text-anchor="start">a program grades it</text>
+<text x="830" y="240" class="s" font-size="12" text-anchor="end">a person grades it</text>
+<path d="M74,84 L74,78 L319.3333333333333,78 L319.3333333333333,84" class="muted" style="stroke-width:1"/>
+<text x="196.7" y="70" class="s" font-size="12" text-anchor="middle">one right answer, one right way</text>
+<path d="M327.3333333333333,84 L327.3333333333333,78 L572.6666666666666,78 L572.6666666666666,84" class="muted" style="stroke-width:1"/>
+<text x="450.0" y="70" class="s" font-size="12" text-anchor="middle">one right answer, many ways</text>
+<path d="M580.6666666666666,84 L580.6666666666666,78 L826,78 L826,84" class="muted" style="stroke-width:1"/>
+<text x="703.3" y="70" class="s" font-size="12" text-anchor="middle">many right answers, many ways</text>
+<line x1="85.2" y1="147" x2="85.2" y2="135" class="ink"/>
+<text x="85.2" y="128.1" class="t" font-size="13" text-anchor="middle">arithmetic</text>
+<line x1="130.8" y1="147" x2="130.8" y2="135" class="ink"/>
+<text x="130.8" y="110.1" class="t" font-size="13" text-anchor="middle">a sudoku</text>
+<line x1="130.8" y1="135.0" x2="130.8" y2="116.0" class="muted"/>
+<line x1="237.2" y1="147" x2="237.2" y2="135" class="ink"/>
+<text x="237.2" y="128.1" class="t" font-size="13" text-anchor="middle">chess</text>
+<line x1="351.2" y1="147" x2="351.2" y2="135" class="ink"/>
+<text x="351.2" y="128.1" class="t" font-size="13" text-anchor="middle">code with tests</text>
+<line x1="488.0" y1="147" x2="488.0" y2="135" class="ink"/>
+<text x="488.0" y="128.1" class="t" font-size="13" text-anchor="middle">a legal brief</text>
+<line x1="647.6" y1="147" x2="647.6" y2="135" class="ink"/>
+<text x="647.6" y="128.1" class="t" font-size="13" text-anchor="middle">an essay</text>
+<line x1="754.0" y1="147" x2="754.0" y2="135" class="ink"/>
+<text x="754.0" y="128.1" class="t" font-size="13" text-anchor="middle">a eulogy</text>
+<line x1="108.0" y1="167" x2="108.0" y2="179" class="ink"/>
+<text x="108.0" y="192.4" class="t" font-size="13" text-anchor="middle">tic-tac-toe</text>
+<line x1="153.6" y1="167" x2="153.6" y2="179" class="ink"/>
+<text x="153.6" y="210.4" class="t" font-size="13" text-anchor="middle">checkers</text>
+<line x1="153.6" y1="179.0" x2="153.6" y2="198.0" class="muted"/>
+<line x1="298.0" y1="167" x2="298.0" y2="179" class="ink"/>
+<text x="298.0" y="192.4" class="t" font-size="13" text-anchor="middle">a proof in Lean</text>
+<line x1="450.0" y1="167" x2="450.0" y2="179" class="ink"/>
+<text x="450.0" y="192.4" class="t" font-size="13" text-anchor="middle">a diagnosis</text>
+<line x1="571.6" y1="167" x2="571.6" y2="179" class="ink"/>
+<text x="571.6" y="192.4" class="t" font-size="13" text-anchor="middle">a translation</text>
+<line x1="708.4" y1="167" x2="708.4" y2="179" class="ink"/>
+<text x="708.4" y="192.4" class="t" font-size="13" text-anchor="middle">a stageplay</text>
+<line x1="799.6" y1="167" x2="799.6" y2="179" class="ink"/>
+<text x="799.6" y="192.4" class="t" font-size="13" text-anchor="middle">a haiku</text>
+<text x="30" y="30" class="t" font-size="18" text-anchor="start" font-weight="500">The spectrum</text>
+</svg>

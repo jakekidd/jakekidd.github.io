@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 1084.923076923077" width="360" height="1084.923076923077" role="img" aria-label="One network cut three times: where everything connects, where the joins are missing, and the forefront and past it, over a bar from the machine to people">
+<title>One network cut three times: where everything connects, where the joins are missing, and the forefront and past it, over a bar from the machine to people</title>
+<style>
+  :root { --ink:#1c1b19; --muted:#6b675f; --rule:#e4e0d8; --paper:#fcfcfb; --water:#2a78d6; --warm:#d9602a; --tint:#eef1f6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e5df; --muted:#9a968e; --rule:#2b2b33; --paper:#161615; --water:#4a90e2; --warm:#e8743f; --tint:#1d2733; } }
+  .t { font-family: 'Newsreader Variable', Georgia, 'Times New Roman', serif; fill: var(--ink); }
+  .s { font-family: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; fill: var(--muted); }
+  .ink { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .muted { stroke: var(--muted); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .rule { stroke: var(--rule); fill: none; stroke-width: 1; }
+  .water { stroke: var(--water); fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .warm { stroke: var(--warm); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .dash { stroke-dasharray: 4 5; }
+  .fill-tint { fill: var(--tint); }
+  .fill-rule { fill: var(--rule); }
+  .fill-paper { fill: var(--paper); }
+</style>
+<style>
+  :root{--fd-n:#46546a;--fd-l:#8d99aa}
+  @media (prefers-color-scheme: dark){:root{--fd-n:#b4bfcd;--fd-l:#6f7a8a}}
+  .fd-e{stroke:var(--fd-l);stroke-width:0.80;fill:none;opacity:.55}
+  .fd-ge{stroke:var(--fd-l);stroke-width:0.90;fill:none;stroke-dasharray:2.0 2.6;opacity:.9}
+  .fd-te{stroke:var(--fd-l);stroke-width:1.00;fill:none}
+  .fd-p{fill:var(--fd-n);stroke:none}
+  .fd-a{fill:var(--paper);stroke:var(--fd-n);stroke-width:1.30}
+  .fd-c{fill:var(--paper);stroke:var(--fd-l);stroke-width:1.20}
+  .fd-g{fill:var(--paper);stroke:var(--fd-n);stroke-width:1.10;stroke-dasharray:2.4 2.2;opacity:.85}
+  .fd-f{fill:var(--paper);stroke:var(--fd-l);stroke-width:1.00;stroke-dasharray:2.0 2.0}
+  .fd-slot{fill:none;stroke:var(--fd-l);stroke-width:1.00;stroke-dasharray:1.0 2.6;opacity:.7}
+  .fd-bar{stroke:var(--fd-n);stroke-width:1.40;stroke-linecap:round}
+  .fd-wash{fill:var(--fd-n)}
+  .fd-hatch{stroke:var(--fd-l);stroke-width:1.0;stroke-dasharray:1.2 3.4;stroke-linecap:round}
+  .fd-ring{fill:none;stroke:var(--fd-l);stroke-width:1.00}
+  .fd-frame{fill:none;stroke:var(--fd-n);stroke-width:1.30;stroke-dasharray:1.5 3.0;stroke-linecap:round}
+  .fd-path{fill:none;stroke:var(--fd-l);stroke-width:1.00;stroke-dasharray:3.0 3.0}
+  .fd-halo{stroke:var(--paper);stroke-width:4.0;fill:none;stroke-linecap:round}
+  .fd-card{fill:var(--paper);opacity:.9}
+</style>
+<defs><filter id="fdn-blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.0"/></filter>
+
+<pattern id="fdn-hatch" patternUnits="userSpaceOnUse" width="7.0" height="7.0"><path d="M0,7.0 L7.0,0" style="stroke:var(--fd-l);stroke-width:0.80;opacity:.5"/></pattern>
+<linearGradient id="fdn-bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:var(--fd-n)"/><stop offset="1" style="stop-color:var(--paper)"/></linearGradient>
+<linearGradient id="fdn-barv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--fd-n)"/><stop offset="1" style="stop-color:var(--paper)"/></linearGradient></defs>
+<text x="44" y="86" class="t" font-size="14" text-anchor="start" font-style="italic">where everything connects</text>
+<clipPath id="fdn-clip0"><rect x="44" y="96" width="302.0" height="232.3" rx="3"/></clipPath>
+<g clip-path="url(#fdn-clip0)">
+<rect x="44" y="96" width="302.0" height="232.3" class="fd-wash" fill-opacity="0.11"/>
+<path d="M75.8,111.6L132.3,116.1M75.8,111.6L52.1,162.6M75.8,111.6L108.6,159.5M132.3,116.1L188.7,113.1M132.3,116.1L108.6,159.5M132.3,116.1L157.5,164.1M188.7,113.1L237.6,117.6M188.7,113.1L157.5,164.1M188.7,113.1L213.9,161.0M237.6,117.6L294.1,114.6M237.6,117.6L213.9,161.0M237.6,117.6L262.8,158.0M294.1,114.6L343.0,111.6M294.1,114.6L262.8,158.0M294.1,114.6L319.3,162.6M343.0,111.6L319.3,162.6M52.1,162.6L108.6,159.5M52.1,162.6L81.9,206.0M108.6,159.5L157.5,164.1M108.6,159.5L130.8,210.5M108.6,159.5L81.9,206.0M157.5,164.1L213.9,161.0M157.5,164.1L187.2,207.5M157.5,164.1L130.8,210.5M213.9,161.0L262.8,158.0M213.9,161.0L236.1,204.5M213.9,161.0L187.2,207.5M262.8,158.0L319.3,162.6M262.8,158.0L292.6,209.0M262.8,158.0L236.1,204.5M319.3,162.6L349.0,206.0M319.3,162.6L292.6,209.0M81.9,206.0L130.8,210.5M81.9,206.0L50.6,257.0M81.9,206.0L107.1,254.0M130.8,210.5L187.2,207.5M130.8,210.5L107.1,254.0M130.8,210.5L156.0,250.9M187.2,207.5L236.1,204.5M187.2,207.5L156.0,250.9M187.2,207.5L212.4,255.5M236.1,204.5L292.6,209.0M236.1,204.5L212.4,255.5M236.1,204.5L268.9,252.5M292.6,209.0L349.0,206.0M292.6,209.0L268.9,252.5M292.6,209.0L317.8,257.0M349.0,206.0L317.8,257.0M50.6,257.0L107.1,254.0M50.6,257.0L80.4,300.4M107.1,254.0L156.0,250.9M107.1,254.0L129.3,297.4M107.1,254.0L80.4,300.4M156.0,250.9L212.4,255.5M156.0,250.9L185.7,301.9M156.0,250.9L129.3,297.4M212.4,255.5L268.9,252.5M212.4,255.5L242.2,298.9M212.4,255.5L185.7,301.9M268.9,252.5L317.8,257.0M268.9,252.5L291.1,303.5M268.9,252.5L242.2,298.9M317.8,257.0L347.5,300.4M317.8,257.0L291.1,303.5M80.4,300.4L129.3,297.4M129.3,297.4L185.7,301.9M185.7,301.9L242.2,298.9M242.2,298.9L291.1,303.5M291.1,303.5L347.5,300.4M75.8,111.6L89.8,61.2M80.4,300.4L68.7,363.2M132.3,116.1L146.2,61.2M129.3,297.4L117.6,363.2M188.7,113.1L202.7,61.2M185.7,301.9L174.1,363.2M237.6,117.6L251.6,61.2M242.2,298.9L230.5,363.2M294.1,114.6L308.0,61.2M291.1,303.5L279.4,363.2M343.0,111.6L356.9,61.2M347.5,300.4L335.9,363.2M75.8,111.6L9.2,120.9M343.0,111.6L380.8,102.3M52.1,162.6L9.2,171.8M319.3,162.6L380.8,153.3M81.9,206.0L9.2,215.3M349.0,206.0L380.8,196.7M50.6,257.0L9.2,266.3M317.8,257.0L380.8,247.7M80.4,300.4L9.2,309.7M347.5,300.4L380.8,291.1" class="fd-e"/>
+<circle cx="75.8" cy="111.6" r="8.1" class="fd-p"/>
+<circle cx="132.3" cy="116.1" r="8.1" class="fd-p"/>
+<circle cx="188.7" cy="113.1" r="8.1" class="fd-p"/>
+<circle cx="237.6" cy="117.6" r="8.1" class="fd-p"/>
+<circle cx="294.1" cy="114.6" r="8.1" class="fd-p"/>
+<circle cx="343.0" cy="111.6" r="8.1" class="fd-p"/>
+<circle cx="52.1" cy="162.6" r="8.1" class="fd-p"/>
+<circle cx="108.6" cy="159.5" r="8.1" class="fd-p"/>
+<circle cx="157.5" cy="164.1" r="8.1" class="fd-p"/>
+<circle cx="213.9" cy="161.0" r="8.1" class="fd-p"/>
+<circle cx="262.8" cy="158.0" r="8.1" class="fd-p"/>
+<circle cx="319.3" cy="162.6" r="8.1" class="fd-p"/>
+<circle cx="81.9" cy="206.0" r="8.1" class="fd-p"/>
+<circle cx="130.8" cy="210.5" r="8.1" class="fd-p"/>
+<circle cx="187.2" cy="207.5" r="8.1" class="fd-a"/>
+<circle cx="236.1" cy="204.5" r="8.1" class="fd-p"/>
+<circle cx="292.6" cy="209.0" r="8.1" class="fd-p"/>
+<circle cx="349.0" cy="206.0" r="8.1" class="fd-p"/>
+<circle cx="50.6" cy="257.0" r="8.1" class="fd-p"/>
+<circle cx="107.1" cy="254.0" r="8.1" class="fd-p"/>
+<circle cx="156.0" cy="250.9" r="8.1" class="fd-p"/>
+<circle cx="212.4" cy="255.5" r="8.1" class="fd-p"/>
+<circle cx="268.9" cy="252.5" r="8.1" class="fd-p"/>
+<circle cx="317.8" cy="257.0" r="8.1" class="fd-p"/>
+<circle cx="80.4" cy="300.4" r="8.1" class="fd-p"/>
+<circle cx="129.3" cy="297.4" r="8.1" class="fd-p"/>
+<circle cx="185.7" cy="301.9" r="8.1" class="fd-p"/>
+<circle cx="242.2" cy="298.9" r="8.1" class="fd-p"/>
+<circle cx="291.1" cy="303.5" r="8.1" class="fd-p"/>
+<circle cx="347.5" cy="300.4" r="8.1" class="fd-p"/>
+</g>
+<rect x="44" y="96" width="302.0" height="232.3" rx="3" class="rule"/>
+<text x="44" y="348.3076923076923" class="t" font-size="11" text-anchor="start" font-style="italic">unproven, but every neighbor is proven:</text>
+<text x="44" y="361.3076923076923" class="t" font-size="11" text-anchor="start" font-style="italic">theoretically the easiest find for the machine</text>
+<line x1="56" y1="338.3076923076923" x2="179.0" y2="215.7" class="fd-halo"/>
+<line x1="56" y1="338.3076923076923" x2="179.0" y2="215.7" class="muted" style="stroke-width:1"/>
+<text x="44" y="404.3076923076923" class="t" font-size="14" text-anchor="start" font-style="italic">where the joins are missing</text>
+<clipPath id="fdn-clip1"><rect x="44" y="414.3076923076923" width="302.0" height="232.3" rx="3"/></clipPath>
+<g clip-path="url(#fdn-clip1)">
+<rect x="44" y="414.3076923076923" width="302.0" height="232.3" class="fd-wash" fill-opacity="0.06"/>
+<path d="M64.9,460.8L125.3,442.2M125.3,442.2L192.7,456.1M192.7,456.1L271.7,439.9M271.7,439.9L329.7,470.1M64.9,460.8L90.5,530.5M125.3,442.2L160.2,521.2M192.7,456.1L160.2,521.2M192.7,456.1L229.8,535.1M271.7,439.9L229.8,535.1M271.7,439.9L301.9,525.8M329.7,470.1L301.9,525.8M90.5,530.5L160.2,521.2M160.2,521.2L229.8,535.1M229.8,535.1L301.9,525.8M90.5,530.5L74.2,600.2M90.5,530.5L148.5,616.4M160.2,521.2L148.5,616.4M229.8,535.1L218.2,621.1M301.9,525.8L290.2,602.5M301.9,525.8L336.7,565.3M74.2,600.2L148.5,616.4M148.5,616.4L218.2,621.1M218.2,621.1L290.2,602.5M290.2,602.5L336.7,565.3M329.7,470.1L336.7,565.3M64.9,460.8L9.2,449.2M125.3,442.2L113.7,379.5M271.7,439.9L287.9,379.5M329.7,470.1L380.8,460.8M74.2,600.2L9.2,611.8M336.7,565.3L380.8,559.5M218.2,621.1L225.2,681.5" class="fd-e"/>
+<path d="M118.3,486.3L64.9,460.8M118.3,486.3L125.3,442.2M118.3,486.3L90.5,530.5M118.3,486.3L160.2,521.2M262.4,484.0L192.7,456.1M262.4,484.0L271.7,439.9M262.4,484.0L301.9,525.8M262.4,484.0L229.8,535.1M188.0,574.6L160.2,521.2M188.0,574.6L229.8,535.1M188.0,574.6L148.5,616.4M188.0,574.6L218.2,621.1" class="fd-ge"/>
+<circle cx="64.9" cy="460.8" r="8.1" class="fd-p"/>
+<circle cx="125.3" cy="442.2" r="8.1" class="fd-p"/>
+<circle cx="192.7" cy="456.1" r="8.1" class="fd-a"/>
+<circle cx="271.7" cy="439.9" r="8.1" class="fd-p"/>
+<circle cx="329.7" cy="470.1" r="8.1" class="fd-p"/>
+<circle cx="90.5" cy="530.5" r="8.1" class="fd-a"/>
+<circle cx="160.2" cy="521.2" r="8.1" class="fd-p"/>
+<circle cx="229.8" cy="535.1" r="8.1" class="fd-p"/>
+<circle cx="301.9" cy="525.8" r="8.1" class="fd-a"/>
+<circle cx="74.2" cy="600.2" r="8.1" class="fd-p"/>
+<circle cx="148.5" cy="616.4" r="8.1" class="fd-a"/>
+<circle cx="218.2" cy="621.1" r="8.1" class="fd-p"/>
+<circle cx="290.2" cy="602.5" r="8.1" class="fd-a"/>
+<circle cx="336.7" cy="565.3" r="8.1" class="fd-p"/>
+<circle cx="118.3" cy="486.3" r="8.1" class="fd-g"/>
+<circle cx="262.4" cy="484.0" r="8.1" class="fd-g"/>
+<circle cx="262.4" cy="484.0" r="17.1" class="fd-ring"/>
+<circle cx="169.3" cy="574.6" r="7.3" class="fd-f"/>
+<circle cx="188.0" cy="574.6" r="7.3" class="fd-f"/>
+<circle cx="206.7" cy="574.6" r="7.3" class="fd-slot"/>
+</g>
+<rect x="44" y="414.3076923076923" width="302.0" height="232.3" rx="3" class="rule"/>
+<text x="44" y="666.6153846153846" class="t" font-size="11" text-anchor="start" font-style="italic">two theories, or a third nobody has named</text>
+<line x1="56" y1="656.6153846153846" x2="168.3" y2="586.9" class="fd-halo"/>
+<line x1="56" y1="656.6153846153846" x2="168.3" y2="586.9" class="muted" style="stroke-width:1"/>
+<text x="346" y="680.6153846153846" class="t" font-size="11" text-anchor="end" font-style="italic">a discovery the machine could make</text>
+<line x1="334" y1="670.6153846153846" x2="269.4" y2="502.4" class="fd-halo"/>
+<line x1="334" y1="670.6153846153846" x2="269.4" y2="502.4" class="muted" style="stroke-width:1"/>
+<text x="44" y="722.6153846153846" class="t" font-size="14" text-anchor="start" font-style="italic">the forefront and past it</text>
+<clipPath id="fdn-clip2"><rect x="44" y="732.6153846153846" width="302.0" height="232.3" rx="3"/></clipPath>
+<g clip-path="url(#fdn-clip2)">
+<rect x="44" y="732.6153846153846" width="302.0" height="232.3" class="fd-wash" fill-opacity="0.02"/>
+<path d="M62.6,802.3L113.7,883.6M62.6,802.3L164.8,779.1M113.7,883.6L218.2,844.1M164.8,779.1L218.2,844.1M113.7,883.6L125.3,946.3M125.3,946.3L181.1,906.8M62.6,802.3L9.2,790.7M164.8,779.1L150.9,697.8M125.3,946.3L9.2,960.3" class="fd-e"/>
+<path d="M227.5,837.2 C253.1,818.6 276.3,809.3 301.9,800.0" class="fd-path"/>
+<path d="M227.5,851.1 C248.4,865.0 262.4,874.3 271.7,881.3" class="fd-path"/>
+<circle cx="308.8" cy="906.8" r="18.6" class="fd-frame"/>
+<circle cx="62.6" cy="802.3" r="8.1" class="fd-p"/>
+<circle cx="113.7" cy="883.6" r="8.1" class="fd-p"/>
+<circle cx="164.8" cy="779.1" r="8.1" class="fd-a"/>
+<circle cx="218.2" cy="844.1" r="8.1" class="fd-c"/>
+<circle cx="125.3" cy="946.3" r="8.1" class="fd-p"/>
+<circle cx="181.1" cy="906.8" r="8.1" class="fd-a"/>
+<circle cx="327.4" cy="762.8" r="8.1" class="fd-c"/>
+<rect x="97.2" y="859.7" width="112.4" height="17" class="fd-card"/>
+<text x="206.6" y="869.7" class="t" font-size="11" text-anchor="end" font-style="italic">not widely accepted</text>
+<line x1="211.3" y1="858.1" x2="213.6" y2="853.5" class="fd-halo"/>
+<line x1="211.3" y1="858.1" x2="213.6" y2="853.5" class="muted" style="stroke-width:1"/>
+<rect x="247.6" y="829.5" width="95.6" height="17" class="fd-card"/>
+<text x="340.2" y="839.5" class="t" font-size="11" text-anchor="end" font-style="italic">forking theories</text>
+<line x1="264.7" y1="826.7" x2="264.7" y2="817.4" class="fd-halo"/>
+<line x1="264.7" y1="826.7" x2="264.7" y2="817.4" class="muted" style="stroke-width:1"/>
+<rect x="225.5" y="934.0" width="95.6" height="30" class="fd-card"/>
+<text x="318.1" y="944.0" class="t" font-size="11" text-anchor="end" font-style="italic">a new framework:</text>
+<text x="318.1" y="957.0" class="t" font-size="11" text-anchor="end" font-style="italic">not found, made</text>
+<line x1="283.3" y1="931.2" x2="293.7" y2="921.3" class="fd-halo"/>
+<line x1="283.3" y1="931.2" x2="293.7" y2="921.3" class="muted" style="stroke-width:1"/>
+<rect x="225.5" y="780.7" width="95.6" height="17" class="fd-card"/>
+<text x="318.1" y="790.7" class="t" font-size="11" text-anchor="end" font-style="italic">no neighbors yet</text>
+<line x1="318.1" y1="779.1" x2="322.2" y2="771.9" class="fd-halo"/>
+<line x1="318.1" y1="779.1" x2="322.2" y2="771.9" class="muted" style="stroke-width:1"/>
+</g>
+<rect x="44" y="732.6153846153846" width="302.0" height="232.3" rx="3" class="rule"/>
+<path d="M16,105.6 L22,96 L28,105.6 L28,955.3230769230769 L22,964.9230769230769 L16,955.3230769230769 Z" class="ink" style="fill:url(#fdn-barv);stroke-width:1;stroke:var(--fd-l)"/>
+<text x="16" y="64" class="s" font-size="12" text-anchor="start">the machine finds things here</text>
+<text x="16" y="1024.923076923077" class="s" font-size="12" text-anchor="start">people make the nodes here</text>
+<text x="16" y="1042.923076923077" class="s" font-size="11" text-anchor="start">its odds of a find rise with a concept’s</text>
+<text x="16" y="1056.923076923077" class="s" font-size="11" text-anchor="start">connections; a node with none is not found,</text>
+<text x="16" y="1070.923076923077" class="s" font-size="11" text-anchor="start">it is made</text>
+<text x="16" y="28" class="t" font-size="17" text-anchor="start" font-weight="500">One network, cut three times</text>
+</svg>

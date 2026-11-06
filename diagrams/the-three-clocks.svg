@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" role="img" aria-label="The three clocks: durations in the buildout">
+<title>The three clocks: durations in the buildout</title>
+<style>
+  :root { --ink:#1c1b19; --muted:#6b675f; --rule:#e4e0d8; --paper:#fcfcfb; --water:#2a78d6; --warm:#d9602a; --tint:#eef1f6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e5df; --muted:#9a968e; --rule:#2b2b33; --paper:#161615; --water:#4a90e2; --warm:#e8743f; --tint:#1d2733; } }
+  .t { font-family: 'Newsreader Variable', Georgia, 'Times New Roman', serif; fill: var(--ink); }
+  .s { font-family: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; fill: var(--muted); }
+  .ink { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .muted { stroke: var(--muted); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .rule { stroke: var(--rule); fill: none; stroke-width: 1; }
+  .water { stroke: var(--water); fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .warm { stroke: var(--warm); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .dash { stroke-dasharray: 4 5; }
+  .fill-tint { fill: var(--tint); }
+  .fill-rule { fill: var(--rule); }
+  .fill-paper { fill: var(--paper); }
+</style>
+<text x="230" y="24" class="t" font-size="18" text-anchor="start" font-weight="500">The three clocks</text>
+<text x="230" y="42" class="s" font-size="12" text-anchor="start">months, log scale</text>
+<line x1="230" y1="52" x2="230" y2="294" class="rule"/>
+<text x="230" y="310" class="s" font-size="11" text-anchor="middle">1 mo</text>
+<line x1="412.48608788555265" y1="52" x2="412.48608788555265" y2="294" class="rule"/>
+<text x="412.48608788555265" y="310" class="s" font-size="11" text-anchor="middle">1 yr</text>
+<line x1="581.5828809904056" y1="52" x2="581.5828809904056" y2="294" class="rule"/>
+<text x="581.5828809904056" y="310" class="s" font-size="11" text-anchor="middle">10 yr</text>
+<line x1="662.2625550856642" y1="52" x2="662.2625550856642" y2="294" class="rule"/>
+<text x="662.2625550856642" y="310" class="s" font-size="11" text-anchor="middle">30 yr</text>
+<text x="218" y="71" class="t" font-size="13" text-anchor="end">the frontier lead</text>
+<rect x="331.8064137902941" y="59" width="6" height="14" rx="3" class="fill-tint ink"/>
+<text x="339.8064137902941" y="71" class="s" font-size="11" text-anchor="start">4 months</text>
+<text x="218" y="105" class="t" font-size="13" text-anchor="end">a customer contract</text>
+<rect x="493.1657619808112" y="93" width="37.51391211444741" height="14" rx="3" class="fill-tint ink"/>
+<text x="538.6796740952586" y="105" class="s" font-size="11" text-anchor="start">3 to 5 years</text>
+<text x="218" y="139" class="t" font-size="13" text-anchor="end">a chip, in the accounts</text>
+<rect x="530.6796740952586" y="127" width="13.389294780699629" height="14" rx="3" class="fill-rule muted"/>
+<text x="552.0689688759583" y="139" class="s" font-size="11" text-anchor="start">5 to 6 years</text>
+<text x="218" y="173" class="t" font-size="13" text-anchor="end">a chip, in the rental market</text>
+<rect x="493.1657619808112" y="161" width="50.90320689514704" height="14" rx="3" class="fill-tint ink"/>
+<text x="552.0689688759583" y="173" class="s" font-size="11" text-anchor="start">about 3 years, so far 6</text>
+<text x="218" y="207" class="t" font-size="13" text-anchor="end">the wait for the grid</text>
+<rect x="530.6796740952586" y="195" width="24.709782215901555" height="14" rx="3" class="fill-rule muted"/>
+<text x="563.3894563111602" y="207" class="s" font-size="11" text-anchor="start">5 to 7 years</text>
+<text x="218" y="241" class="t" font-size="13" text-anchor="end">a building lease</text>
+<rect x="611.3593481905173" y="229" width="21.126739695035326" height="14" rx="3" class="fill-tint ink"/>
+<text x="640.4860878855526" y="241" class="s" font-size="11" text-anchor="start">15 to 20 years</text>
+<text x="218" y="275" class="t" font-size="13" text-anchor="end">the debt</text>
+<rect x="632.4860878855526" y="263" width="29.776467200111597" height="14" rx="3" class="fill-tint ink"/>
+<text x="670.2625550856642" y="275" class="s" font-size="11" text-anchor="start">20 to 30 years</text>
+</svg>

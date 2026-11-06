@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520" role="img" aria-label="Tasks placed by who grades them and when the grade arrives">
+<title>Tasks placed by who grades them and when the grade arrives</title>
+<style>
+  :root { --ink:#1c1b19; --muted:#6b675f; --rule:#e4e0d8; --paper:#fcfcfb; --water:#2a78d6; --warm:#d9602a; --tint:#eef1f6; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#e8e5df; --muted:#9a968e; --rule:#2b2b33; --paper:#161615; --water:#4a90e2; --warm:#e8743f; --tint:#1d2733; } }
+  .t { font-family: 'Newsreader Variable', Georgia, 'Times New Roman', serif; fill: var(--ink); }
+  .s { font-family: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; fill: var(--muted); }
+  .ink { stroke: var(--ink); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .muted { stroke: var(--muted); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .rule { stroke: var(--rule); fill: none; stroke-width: 1; }
+  .water { stroke: var(--water); fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .warm { stroke: var(--warm); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+  .dash { stroke-dasharray: 4 5; }
+  .fill-tint { fill: var(--tint); }
+  .fill-rule { fill: var(--rule); }
+  .fill-paper { fill: var(--paper); }
+</style>
+<line x1="90" y1="440" x2="790" y2="440" class="rule"/>
+<line x1="90" y1="70" x2="90" y2="440" class="rule"/>
+<line x1="440" y1="70" x2="440" y2="440" class="rule dash"/>
+<line x1="90" y1="255" x2="790" y2="255" class="rule dash"/>
+<text x="90" y="458" class="s" font-size="12" text-anchor="start">a program</text>
+<text x="440" y="458" class="s" font-size="12" text-anchor="middle">who grades it</text>
+<text x="790" y="458" class="s" font-size="12" text-anchor="end">a person</text>
+<text x="82" y="440" class="s" font-size="12" text-anchor="end">at once</text>
+<text x="82" y="78" class="s" font-size="12" text-anchor="end">years later</text>
+<text x="76" y="255" class="s" font-size="12" text-anchor="middle" transform="rotate(-90 76 255)">when the grade arrives</text>
+<circle cx="104.0" cy="432.6" r="4" class="ink"/>
+<circle cx="104.0" cy="432.6" r="2.2" class="fill-paper" stroke="none"/>
+<text x="113.0" y="436.6" class="s" font-size="12" text-anchor="start">arithmetic</text>
+<circle cx="125.0" cy="415.6" r="4" class="ink"/>
+<circle cx="125.0" cy="415.6" r="2.2" class="fill-paper" stroke="none"/>
+<text x="134.0" y="419.5" class="s" font-size="12" text-anchor="start">a sudoku</text>
+<circle cx="146.0" cy="398.6" r="4" class="ink"/>
+<circle cx="146.0" cy="398.6" r="2.2" class="fill-paper" stroke="none"/>
+<text x="155.0" y="402.5" class="s" font-size="12" text-anchor="start">a proof in Lean</text>
+<circle cx="167.0" cy="381.5" r="4" class="ink"/>
+<circle cx="167.0" cy="381.5" r="2.2" class="fill-paper" stroke="none"/>
+<text x="176.0" y="385.5" class="s" font-size="12" text-anchor="start">tic-tac-toe</text>
+<circle cx="188.0" cy="364.5" r="4" class="ink"/>
+<circle cx="188.0" cy="364.5" r="2.2" class="fill-paper" stroke="none"/>
+<text x="197.0" y="368.5" class="s" font-size="12" text-anchor="start">checkers</text>
+<circle cx="209.0" cy="347.5" r="4" class="ink"/>
+<circle cx="209.0" cy="347.5" r="2.2" class="fill-paper" stroke="none"/>
+<text x="218.0" y="351.5" class="s" font-size="12" text-anchor="start">chess</text>
+<circle cx="286.0" cy="414.1" r="4" class="ink"/>
+<circle cx="286.0" cy="414.1" r="2.2" class="fill-paper" stroke="none"/>
+<text x="295.0" y="418.1" class="s" font-size="12" text-anchor="start">code with tests</text>
+<circle cx="496.0" cy="395.6" r="4" class="ink"/>
+<circle cx="496.0" cy="395.6" r="2.2" class="fill-paper" stroke="none"/>
+<text x="505.0" y="399.6" class="s" font-size="12" text-anchor="start">a translation</text>
+<circle cx="671.0" cy="428.9" r="4" class="ink"/>
+<circle cx="671.0" cy="428.9" r="2.2" class="fill-paper" stroke="none"/>
+<text x="680.0" y="432.9" class="s" font-size="12" text-anchor="start">a joke</text>
+<circle cx="720.0" cy="406.7" r="4" class="ink"/>
+<circle cx="720.0" cy="406.7" r="2.2" class="fill-paper" stroke="none"/>
+<text x="729.0" y="410.7" class="s" font-size="12" text-anchor="start">a eulogy</text>
+<circle cx="762.0" cy="384.5" r="4" class="ink"/>
+<circle cx="762.0" cy="384.5" r="2.2" class="fill-paper" stroke="none"/>
+<text x="753.0" y="388.5" class="s" font-size="12" text-anchor="end">a haiku</text>
+<circle cx="650.0" cy="321.6" r="4" class="ink"/>
+<circle cx="650.0" cy="321.6" r="2.2" class="fill-paper" stroke="none"/>
+<text x="659.0" y="325.6" class="s" font-size="12" text-anchor="start">an essay</text>
+<circle cx="706.0" cy="277.2" r="4" class="ink"/>
+<circle cx="706.0" cy="277.2" r="2.2" class="fill-paper" stroke="none"/>
+<text x="715.0" y="281.2" class="s" font-size="12" text-anchor="start">a stageplay</text>
+<circle cx="608.0" cy="232.8" r="4" class="ink"/>
+<circle cx="608.0" cy="232.8" r="2.2" class="fill-paper" stroke="none"/>
+<text x="617.0" y="236.8" class="s" font-size="12" text-anchor="start">a legal brief</text>
+<circle cx="524.0" cy="195.8" r="4" class="ink"/>
+<circle cx="524.0" cy="195.8" r="2.2" class="fill-paper" stroke="none"/>
+<text x="533.0" y="199.8" class="s" font-size="12" text-anchor="start">a diagnosis</text>
+<circle cx="300.0" cy="232.8" r="4" class="ink"/>
+<circle cx="300.0" cy="232.8" r="2.2" class="fill-paper" stroke="none"/>
+<text x="309.0" y="236.8" class="s" font-size="12" text-anchor="start">a forecast</text>
+<circle cx="160.0" cy="107.0" r="4" class="ink"/>
+<circle cx="160.0" cy="107.0" r="2.2" class="fill-paper" stroke="none"/>
+<text x="169.0" y="111.0" class="s" font-size="12" text-anchor="start">a bridge design</text>
+<circle cx="342.0" cy="92.2" r="4" class="ink"/>
+<circle cx="342.0" cy="92.2" r="2.2" class="fill-paper" stroke="none"/>
+<text x="351.0" y="96.2" class="s" font-size="12" text-anchor="start">a drug</text>
+<circle cx="566.0" cy="121.8" r="4" class="ink"/>
+<circle cx="566.0" cy="121.8" r="2.2" class="fill-paper" stroke="none"/>
+<text x="575.0" y="125.8" class="s" font-size="12" text-anchor="start">a product decision</text>
+<text x="30" y="30" class="t" font-size="18" text-anchor="start" font-weight="500">Two axes under the dial</text>
+<text x="30" y="486" class="s" font-size="12" text-anchor="start">The dial collapses both onto one line.</text>
+<text x="30" y="502" class="s" font-size="12" text-anchor="start">The late-arriving corner is where a judgment skill can become an answer-key skill, slowly.</text>
+</svg>
